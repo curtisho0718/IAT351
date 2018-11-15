@@ -1,3 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 11vh;
+  background-color: beige;
+}
+
+main {
+  display: relative;
+  position: fixed;
+  top: 11vh;
+  left: 0;
+  right: 0;
+  height: 89vh;
+  background-color: gray;
+}
+
+div {
+  border-width: 1rem;
+  border-color: gray;
+  background-color: beige;
+}
+
+#left_nav {
+  position: fixed;
+  top: 11vh;
+  left: 0;
+  height: 89vh;
+  width: 15vw;
+  background-color: white;
+}
+
+#right_nav {
+  position: fixed;
+  top: 11vh;
+  right: 0;
+  height: 89vh;
+  width: 15vw;
+  background-color: white;
+}
+
+/* Above code is for the calendar.html file ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
+
 #calendar {
     max-width: 900px;
     margin: 0 auto;
