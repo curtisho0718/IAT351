@@ -43,7 +43,7 @@ main {
   right: 0;
   max-width: 100%;
   margin: 0;
-  background-color: black;
+  background-color: #ffffff;
 }
 
 #tabs_component {
@@ -64,21 +64,34 @@ main {
 
 .year {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex: 1;
 }
 
-.semester {
+#year_1 .semester, #year_3 .semester {
   flex: 1;
   background-color: #707070;
 }
 
-.semester:nth-child(2) {
+#year_1 .semester:nth-child(2), #year_3 .semester:nth-child(2) {
   background-color: #5e5e5e;
 }
 
-.semester:nth-child(3) {
+#year_1 .semester:nth-child(3), #year_3 .semester:nth-child(3) {
   background-color: #292929;
+}
+
+#year_2 .semester, #year_4 .semester {
+  flex: 1;
+  background-color: #292929;
+}
+
+#year_2 .semester:nth-child(2), #year_4 .semester:nth-child(2) {
+  background-color: #707070;
+}
+
+#year_2 .semester:nth-child(3), #year_4 .semester:nth-child(3) {
+  background-color: #5e5e5e;
 }
 
 /* Above code is for the calendar.html file ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
