@@ -8,41 +8,77 @@ header {
   left: 0;
   right: 0;
   height: 11vh;
-  background-color: beige;
+  z-index: 10;
+  background-color: #464646;
 }
 
 main {
-  display: relative;
-  position: fixed;
+  position: absolute;
   top: 11vh;
   left: 0;
   right: 0;
-  height: 89vh;
-  background-color: gray;
-}
-
-div {
-  border-width: 1rem;
-  border-color: gray;
-  background-color: beige;
 }
 
 #left_nav {
   position: fixed;
-  top: 11vh;
-  left: 0;
   height: 89vh;
   width: 15vw;
-  background-color: white;
+  left: 0;
+  background-color: #adadad;
 }
 
 #right_nav {
   position: fixed;
-  top: 11vh;
-  right: 0;
   height: 89vh;
   width: 15vw;
-  background-color: white;
+  right: 0;
+  background-color: #adadad;
+}
+
+#calendar_view {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  left: 15vw;
+  right: 15vw;
+  max-width: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+#tabs_component {
+  position: fixed;
+  left: 15vw;
+  right: 15vw;
+  height: 3rem;
+  background-color: #3b3b3b;
+}
+
+#calendar_component {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 0 0 0;
+}
+
+.year {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.semester {
+  flex: 1;
+  background-color: #707070;
+}
+
+.semester:nth-child(2) {
+  background-color: #5e5e5e;
+}
+
+.semester:nth-child(3) {
+  background-color: #292929;
 }
 
 /* Above code is for the calendar.html file ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
