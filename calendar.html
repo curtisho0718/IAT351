@@ -15,6 +15,7 @@
 <body>
   <header>
     <h1>Application Name</h1>
+
   </header>
 
   <main>
@@ -23,7 +24,7 @@
         <a href="#">Test</a>
         <div class="checkbox_pair">
           <label class="container">
-            <input type="checkbox" checked="checked">
+            <input type="checkbox">
             <span class="checkmark"></span>
             One
           </label>
@@ -32,61 +33,87 @@
     </section>
 
     <section id="calendar_view">
-      <div id="tabs_component"></div>
+      <div id="tabs_component">
+          <button class="tablink" onclick="openPage('Year 1', this, 'red')" id="defaultOpen">Year 1</button>
+          <button class="tablink" onclick="openPage('Year 2', this, 'green')">Year 2</button>
+          <button class="tablink" onclick="openPage('Year 3', this, 'blue')">Year 3</button>
+          <button class="tablink" onclick="openPage('Year 4', this, 'orange')">Year 4</button>
+
+          <div id="Year 1" class="tabcontent">
+            <h3>Year 1</h3>
+            <p>Home is where the heart is..</p>
+          </div>
+
+          <div id="Year 2" class="tabcontent">
+            <h3>Year 2</h3>
+            <p>Some news this fine day!</p>
+          </div>
+
+          <div id="Year 3" class="tabcontent">
+            <h3>Year 3</h3>
+            <p>Get in touch, or swing by for a cup of coffee.</p>
+          </div>
+
+          <div id="Year 4" class="tabcontent">
+            <h3>Year 4</h3>
+            <p>Who we are and what we do.</p>
+          </div>
+      </div>
+
       <div id="calendar_component">
         <div id="year_1" class="year">
           <div id="fall_1" class="semester">
-            <p>poopoo</p>
+            <h2>1st Year Fall</h2>
           </div>
 
           <div id="spring_1" class="semester">
-            <p>poopoo</p>
+            <h2>1st Year Spring</h2>
           </div>
 
           <div id="summer_1" class="semester">
-            <p>poopoo</p>
+            <h2>1st Year Summer</h2>
           </div>
         </div>
 
         <div id="year_2" class="year">
           <div id="fall_2" class="semester">
-
+            <h2>2nd Year Fall</h2>
           </div>
 
           <div id="spring_2" class="semester">
-
+            <h2>2nd Year Spring</h2>
           </div>
 
           <div id="summer_2" class="semester">
-
+            <h2>2nd Year Summer</h2>
           </div>
         </div>
 
         <div id="year_3" class="year">
           <div id="fall_3" class="semester">
-            <p>poopoo</p>
+            <h2>3rd Year Fall</h2>
           </div>
 
           <div id="spring_3" class="semester">
-            <p>poopoo</p>
+            <h2>3rd Year Spring</h2>
           </div>
 
           <div id="summer_3" class="semester">
-            <p>poopoo</p>
+            <h2>3rd Year Summer</h2>
           </div>
         </div>
 
         <div id="year_4" class="year">
           <div id="fall_4" class="semester">
-
+            <h2>4th Year Fall</h2>
           </div>
 
           <div id="spring_4" class="semester">
-
+            <h2>4th Year Spring</h2>
           </div>
 
           <div id="summer_4" class="semester">
-
+            <h2>4th Year Summer</h2>
           </div>
         </div>
       </div>
@@ -95,6 +122,24 @@
     <!-- <section id="right_nav">
 
     </section> -->
+    <script>
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </main>
 
   <footer>
