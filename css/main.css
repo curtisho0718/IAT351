@@ -9,7 +9,7 @@ h1 {
   padding: 0 0 0 1.5rem;
 }
 
-p {
+p, label {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -173,7 +173,7 @@ main {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #1B4687;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
