@@ -16,7 +16,7 @@ $semester = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $year = validate_input($_POST["year"]);
   $code = validate_input($_POST["code"]);
-  $nunber = validate_input($_POST["number"]);
+  $number = validate_input($_POST["number"]);
   $semester = validate_input($_POST["semester"]);
 }
 
@@ -50,7 +50,7 @@ function validate_input($data)
     <br><br>
     Course Code: <input type="text" name="code" value="IAT">
     <br><br>
-    Course Number: <input type="text" name="number" value="100">
+    Course Number: <input type="text" name="number" value="102">
     <br><br>
     Semester:
     <input type="radio" name="semester" value="summer">Summer
@@ -63,10 +63,31 @@ function validate_input($data)
 
 <h2>Output Testing</h2>
 <?php
-echo $year;
-echo $semester;
-echo $code;
-echo $number;
+echo $year . "<br />";
+echo $semester . "<br />";
+echo $code . "<br />";
+echo $number . "<br />";
 ?>
+
+
+ <?php
+$url="http://www.sfu.ca/bin/wcm/course-outlines?".urlencode($year)."/".urlencode($semester)."/".urlencode($code)."/".$number."/d101";
+$data =file_get_contents($url);
+$characters= json_decode($data);
+//var_dump($characters);
+$info = $characters->info;
+$title=$info->title;
+$description=$info->description;
+$prereq=$info->prerequisites;
+// $description= $info->description;
+// var_dump($info->title);
+var_dump($info->prerequisites);
+echo "<br />". $url . "<br />";
+echo $title . "<br />";
+echo $description . "<br />";
+echo $prereq . "<br />";
+
+?>
+
 </body>
 </html>
