@@ -24,12 +24,12 @@
         <a href="#">Test</a>
         <div class="checkbox_pair">
           <label class="container">
-            <input onclick="addEasyCourse();" type="checkbox">
+            <input onclick="addEasyCourse(); fire();" type="checkbox">
             <span class="checkmark"></span>
             One
           </label>
           <label class="container">
-            <input onclick="removeEasyCourse();" type="checkbox">
+            <input onclick="removeEasyCourse(); fire();" type="checkbox">
             <span class="checkmark"></span>
             One
           </label>
@@ -47,7 +47,7 @@
         <div id="Year 1" class="tabcontent">
           <h3>Workload</h3>
           <p class="difficulty_bar">
-            <progress id="year1_fall1_tab1_difficulty" value="0" max="100"></progress>
+            <progress id="year1_fall1_tab1_difficulty" class="difficulty_bar_green" value="0" max="100"></progress>
           </p>
         </div>
 
