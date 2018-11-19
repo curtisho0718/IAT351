@@ -102,15 +102,24 @@ main {
 .year {
   display: flex;
   flex-direction: column;
+  flex: 2;
+}
+
+#semester_names {
   flex: 1;
 }
 
 .semester {
-  flex: 1;
+  flex: 2;
   background-color: #FFFFFF;
   border-color: #3b3b3b;
   border-style: solid;
   border-width: 0.05rem;
+}
+
+.year_name {
+  text-align: center;
+  flex: 1;
 }
 
 .vertical_line {
