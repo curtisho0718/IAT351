@@ -197,7 +197,7 @@ main {
   transform: rotate(45deg);
 }
 
-.difficulty_bar progress {
+progress {
   /* Reset the default appearance */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -212,19 +212,51 @@ main {
   box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
 }
 
-.difficulty_bar progress::-webkit-progress-bar {
+progress::-webkit-progress-bar {
   background: #EEE;
   box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
   border-radius: 3px;
 }
 
-.difficulty_bar progress::-webkit-progress-value {
-  background-color: #CC0000;
+.difficulty_bar_green {
+  background-color: green;
+}
+
+.difficulty_bar_green::-webkit-progress-value {
+  background-color: green;
   border-radius: 3px;
 }
 
-.difficulty_bar progress::-moz-progress-bar {
-  background-color: #CC0000;
+.difficulty_bar_green::-moz-progress-bar {
+  background-color: green;
+  border-radius: 3px;
+}
+
+.difficulty_bar_yellow {
+  background-color: yellow;
+}
+
+.difficulty_bar_yellow::-webkit-progress-value {
+  background-color: yellow;
+  border-radius: 3px;
+}
+
+.difficulty_bar_yellow::-moz-progress-bar {
+  background-color: yellow;
+  border-radius: 3px;
+}
+
+.difficulty_bar_red {
+  background-color: red;
+}
+
+.difficulty_bar_red::-webkit-progress-value {
+  background-color: red;
+  border-radius: 3px;
+}
+
+.difficulty_bar_red::-moz-progress-bar {
+  background-color: red;
   border-radius: 3px;
 } /* Code adapted from https://codepen.io/matt-west/pen/bpzEy */
 
