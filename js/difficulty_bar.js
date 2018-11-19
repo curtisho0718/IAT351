@@ -57,3 +57,9 @@ function fire() {
         $('#year1_fall1_tab1_difficulty').addClass("difficulty_bar_yellow");
     }
 }
+
+function tab1() {
+    // document.getElementById('tab1') {
+
+    // }
+}

@@ -91,7 +91,15 @@ main {
   background-color: #3b3b3b;
 }
 
-#calendar_component {
+#tab1 {
+  display: show;
+}
+
+#tab2 {
+  display: none;
+}
+
+.calendar_component {
   display: flex;
   flex-direction: row;
   width: 100%;
