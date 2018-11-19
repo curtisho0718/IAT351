@@ -42,9 +42,9 @@
     <section id="calendar_view">
       <div id="tabs_component">
         <button class="tablink" onclick="openPage('Year 1', this, 'red')" id="defaultOpen">Year 1</button>
-        <button class="tablink" onclick="openPage('Year 2', this, 'green')">Year 2</button>
-        <button class="tablink" onclick="openPage('Year 3', this, 'blue')">Year 3</button>
-        <button class="tablink" onclick="openPage('Year 4', this, 'orange')">Year 4</button>
+        <button class="tablink" onclick="openPage('+', this, 'green')">+</button>
+      <!--  <button class="tablink" onclick="openPage('Year 3', this, 'blue')">Year 3</button>
+        <button class="tablink" onclick="openPage('Year 4', this, 'orange')">Year 4</button> -->
 
         <div id="Year 1" class="tabcontent">
           <h3>Workload</h3>
@@ -53,20 +53,19 @@
           </p>
         </div>
 
-        <div id="Year 2" class="tabcontent">
-          <h3>Year 2</h3>
-          <!-- content for tab 2 goes here -->
+        <div id="+" class="tabcontent">
+          <!-- Content for addition tab goes here -->
         </div>
 
-        <div id="Year 3" class="tabcontent">
+      <!--  <div id="Year 3" class="tabcontent">
           <h3>Year 3</h3>
           <!-- content for tab 3 goes here -->
-        </div>
+      <!--  </div>
 
         <div id="Year 4" class="tabcontent">
           <h3>Year 4</h3>
           <!-- content for tab 4 goes here -->
-        </div>
+        <!--</div> -->
       </div>
 
       <div id="calendar_component">
