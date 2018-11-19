@@ -40,4 +40,20 @@ function add438() {
 
 function remove438() {
     document.getElementById('year1_fall1_tab1_difficulty').value -= 75;
-} 
+}
+
+function fire() {
+    if (document.getElementById('year1_fall1_tab1_difficulty').value < 61) {
+        $('#year1_fall1_tab1_difficulty').removeClass("difficulty_bar_red");
+        $('#year1_fall1_tab1_difficulty').removeClass("difficulty_bar_yellow");
+        $('#year1_fall1_tab1_difficulty').addClass("difficulty_bar_green");
+    } else if (document.getElementById('year1_fall1_tab1_difficulty').value > 75) {
+        $('#year1_fall1_tab1_difficulty').removeClass("difficulty_bar_yellow");
+        $('#year1_fall1_tab1_difficulty').removeClass("difficulty_bar_green");
+        $('#year1_fall1_tab1_difficulty').addClass("difficulty_bar_red");
+    } else {
+        $('#year1_fall1_tab1_difficulty').removeClass("difficulty_bar_green");
+        $('#year1_fall1_tab1_difficulty').removeClass("difficulty_bar_red");
+        $('#year1_fall1_tab1_difficulty').addClass("difficulty_bar_yellow");
+    }
+}
