@@ -19,12 +19,17 @@
   </header>
 
   <main>
-   <section id="left_nav">
+    <section id="left_nav">
       <div class="vertical_line">
         <a href="#">Test</a>
         <div class="checkbox_pair">
           <label class="container">
-            <input type="checkbox" checked="checked">
+            <input onclick="addEasyCourse();" type="checkbox">
+            <span class="checkmark"></span>
+            One
+          </label>
+          <label class="container">
+            <input onclick="removeEasyCourse();" type="checkbox">
             <span class="checkmark"></span>
             One
           </label>
@@ -33,33 +38,35 @@
     </section>
 
     <section id="calendar_view">
-      <div id="tabs_component"></div>
-      <h1>
-        <button class="tablink" onclick="openPage('Year 1', this, 'red')"id = "defaultOpen">Year 1</button>
-  <button class="tablink" onclick="openPage('Year 2', this, 'green')">Year 2</button>
-  <button class="tablink" onclick="openPage('Year 3', this, 'blue')">Year 3</button>
-  <button class="tablink" onclick="openPage('Year 4', this, 'orange')">Year 4</button>
+      <div id="tabs_component">
+        <button class="tablink" onclick="openPage('Year 1', this, 'red')" id="defaultOpen">Year 1</button>
+        <button class="tablink" onclick="openPage('Year 2', this, 'green')">Year 2</button>
+        <button class="tablink" onclick="openPage('Year 3', this, 'blue')">Year 3</button>
+        <button class="tablink" onclick="openPage('Year 4', this, 'orange')">Year 4</button>
 
-  <div id="Year 1" class="tabcontent">
-    <h3>Year 1</h3>
-    <p>Home is where the heart is..</p>
-  </div>
+        <div id="Year 1" class="tabcontent">
+          <h3>Workload</h3>
+          <p class="difficulty_bar">
+            <progress id="year1_fall1_tab1_difficulty" value="0" max="100"></progress>
+          </p>
+        </div>
 
-  <div id="Year 2" class="tabcontent">
-    <h3>Year 2</h3>
-    <p>Some news this fine day!</p>
-  </div>
+        <div id="Year 2" class="tabcontent">
+          <h3>Year 2</h3>
+          <p>Some news this fine day!</p>
+        </div>
 
-  <div id="Year 3" class="tabcontent">
-    <h3>Year 3</h3>
-    <p>Get in touch, or swing by for a cup of coffee.</p>
-  </div>
+        <div id="Year 3" class="tabcontent">
+          <h3>Year 3</h3>
+          <p>Get in touch, or swing by for a cup of coffee.</p>
+        </div>
 
-  <div id="Year 4" class="tabcontent">
-    <h3>Year 4</h3>
-    <p>Who we are and what we do.</p>
-  </div>
-      <h1>
+        <div id="Year 4" class="tabcontent">
+          <h3>Year 4</h3>
+          <p>Who we are and what we do.</p>
+        </div>
+      </div>
+
       <div id="calendar_component">
         <div id="year_1" class="year">
           <div id="fall_1" class="semester">
@@ -123,23 +130,27 @@
 
     </section> -->
     <script>
-function openPage(pageName,elmnt,color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(pageName).style.display = "block";
-    elmnt.style.backgroundColor = color;
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
 
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/difficulty_bar.js"></script>
   </main>
 
   <footer>
