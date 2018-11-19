@@ -182,7 +182,7 @@ main {
 /* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
-}
+} /* Code adapted from https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
@@ -196,6 +196,39 @@ main {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.difficulty_bar progress {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  width: 23.2%;
+  height: 1rem;
+
+  border: none;
+  background: #EEE;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+}
+
+.difficulty_bar progress::-webkit-progress-bar {
+  background: #EEE;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+  border-radius: 3px;
+}
+
+.difficulty_bar progress::-webkit-progress-value {
+  background-color: #CC0000;
+  border-radius: 3px;
+}
+
+.difficulty_bar progress::-moz-progress-bar {
+  background-color: #CC0000;
+  border-radius: 3px;
+} /* Code adapted from https://codepen.io/matt-west/pen/bpzEy */
+
+
 
 /* Above code is for the calendar.html file ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
 
