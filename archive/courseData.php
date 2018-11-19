@@ -7,12 +7,16 @@
   <title>Document</title>
 </head>
 <body>
+
+
 <?php
+// initialize the parameters 
 $year = "";
 $codde = "";
 $number = "";
 $semester = "";
 
+// form handling and validating 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $year = validate_input($_POST["year"]);
   $code = validate_input($_POST["code"]);
@@ -20,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $semester = validate_input($_POST["semester"]);
 }
 
+// validating function
 function validate_input($data)
 {
   $data = trim($data);
@@ -29,22 +34,7 @@ function validate_input($data)
 }
 ?>
 
-
-<!-- <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">  
-    Year: <input type="text" name="year">
-    <br><br>
-    Course Code: <input type="text" name="code">
-    <br><br>
-    Course Number: <input type="text" name="number">
-    <br><br>
-    Semester:
-    <input type="radio" name="semester" value="summer">Summer
-    <input type="radio" name="semester" value="fall">Fall
-    <input type="radio" name="semester" value="spring" checked="checked">Spring
-    <br><br>
-    <input type="submit" name="submit" value="Submit">
-</form> -->
-
+<!-- start of the form -->
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">  
     Year: <input type="text" name="year" value="2018">
     <br><br>
@@ -71,22 +61,24 @@ echo $number . "<br />";
 
 
  <?php
+// SFU API Database url
 $url="http://www.sfu.ca/bin/wcm/course-outlines?".urlencode($year)."/".urlencode($semester)."/".urlencode($code)."/".$number."/d101";
+// fetch content 
 $data =file_get_contents($url);
+// the raw json data
 $characters= json_decode($data);
-//var_dump($characters);
+// object name 
 $info = $characters->info;
+// information
 $title=$info->title;
 $description=$info->description;
 $prereq=$info->prerequisites;
 // $description= $info->description;
 // var_dump($info->title);
-var_dump($info->prerequisites);
 echo "<br />". $url . "<br />";
 echo $title . "<br />";
 echo $description . "<br />";
 echo $prereq . "<br />";
-
 ?>
 
 </body>
