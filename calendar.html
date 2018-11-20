@@ -41,31 +41,16 @@
 
     <section id="calendar_view">
       <div id="tabs_component">
-        <button class="tablink" onclick="openPage('Year 1', this, 'red')" id="defaultOpen">Year 1</button>
-        <button class="tablink" onclick="openPage('+', this, 'green')">+</button>
+        <button class="tablink" id="tab_button1" onclick="openPage('tab1', this, 'red')" id="defaultOpen">Year 1</button>
+        <button class="tablink" id="tab_button2" onclick="openPage('tab2', this, 'green')">+</button>
         <!--  <button class="tablink" onclick="openPage('Year 3', this, 'blue')">Year 3</button>
         <button class="tablink" onclick="openPage('Year 4', this, 'orange')">Year 4</button> -->
 
-        <div id="Year 1" class="tabcontent" onclick="tab1();">
-
-        </div>
-
-        <div id="+" class="tabcontent">
-          <!-- Content for addition tab goes here -->
-        </div>
-
-        <!--  <div id="Year 3" class="tabcontent">
-          <h3>Year 3</h3>
-          <!-- content for tab 3 goes here -->
-        <!--  </div>
-
-        <div id="Year 4" class="tabcontent">
-          <h3>Year 4</h3>
-          <!-- content for tab 4 goes here -->
-        <!--</div> -->
+        <div id="tab1" class="tabcontent"></div>
+        <div id="tab2" class="tabcontent"></div>
       </div>
 
-      <div id="tab1" class="calendar_component">
+      <div id="schedule1" class="calendar_component">
         <div id="semester_names" class="year">
           <div class="semester year_name"></div>
 
@@ -136,7 +121,7 @@
         </div>
       </div>
 
-      <div id="tab2" class="calendar_component">
+      <div id="schedule2" class="calendar_component">
           <div id="semester_names" class="year">
             <div class="semester year_name"></div>
   
@@ -211,6 +196,7 @@
     <!-- <section id="right_nav">
 
     </section> -->
+    
     <script>
       function openPage(pageName, elmnt, color) {
         var i, tabcontent, tablinks;
@@ -227,12 +213,12 @@
 
       }
       // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
+      // document.getElementById("defaultOpen").click();
     </script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/difficulty_bar.js"></script>
+    <script src="js/tabs_and_difficulty.js"></script>
     <script>
       function myFunction() {
         window.print();
