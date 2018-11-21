@@ -73,6 +73,12 @@ main {
   background-color: #adadad;
 }
 
+.course-list {
+    width: 10rem;
+    height: 12rem;
+    overflow: scroll;
+}
+
 #calendar_view {
   display: flex;
   position: absolute;
