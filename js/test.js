@@ -56,7 +56,7 @@ $(function() {
    		}
 	});
 
-    $("td").droppable({hoverClass: 'bgrd', accept: '.item', //Jquery 'hover' instead of CSS
+    $(".semester").droppable({hoverClass: 'bgrd', accept: '.item', //Jquery 'hover' instead of CSS
     drop: function() {
     	// if ($("li").hasClass("item")) 
     	$(this).addClass("num");

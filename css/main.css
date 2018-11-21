@@ -61,6 +61,7 @@ main {
   width: 15vw;
   left: 0;
   background-color: #FFFFFF;
+  z-index: 1;
 }
 
 #right_nav {
