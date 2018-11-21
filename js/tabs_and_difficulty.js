@@ -24,10 +24,19 @@ $("#tab_button2").click(function () {
 
 function addEasyCourse() {
     if (table_shown == 1) {
-        document.getElementById('year1_fall1_tab1_difficulty').value += 15;
+        document.getElementById('year1_fall1_tab1_difficulty1').value += 15;
     } else if (table_shown == 2) {
         document.getElementById('year1_fall1_tab1_difficulty2').value += 15;
     }
+
+    // var individual_bars = document.getElementById('year1_fall1_tab1_difficulty')
+    // for (var i = 0; i < 10  ; i++) {
+    //     if (table_shown == i) {
+    //         for (var j = 0; j < individual_bars.length; j++) {
+    //         individual_bars[j].value += 15;
+    //         }
+    //     }
+    // }
 }
 
 function removeEasyCourse() {
