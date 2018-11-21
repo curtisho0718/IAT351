@@ -41,7 +41,7 @@
 
     <section id="calendar_view">
       <div id="tabs_component">
-        <button class="tablink" id="tab_button1" onclick="openPage('tab1', this, 'red')" id="defaultOpen">Year 1</button>
+        <button class="tablink" id="tab_button1" onclick="openPage('tab1', this, 'red')" id="defaultOpen">Schedule 1</button>
         <button class="tablink" id="tab_button2" onclick="openPage('tab2', this, 'green')">+</button>
         <!--  <button class="tablink" onclick="openPage('Year 3', this, 'blue')">Year 3</button>
         <button class="tablink" onclick="openPage('Year 4', this, 'orange')">Year 4</button> -->
@@ -51,152 +51,262 @@
       </div>
 
       <div id="schedule1" class="calendar_component">
-        <div id="semester_names" class="year">
+        <div class="semester_names year">
           <div class="semester year_name"></div>
 
-          <div id="fall" class="semester">
+          <div class="fall semester">
             <h2>Fall</h2>
           </div>
 
-          <div id="spring" class="semester">
+          <div class="spring semester">
             <h2>Spring</h2>
           </div>
 
-          <div id="summer" class="semester">
+          <div class="summer semester">
             <h2>Summer</h2>
           </div>
         </div>
 
-        <div id="year_1" class="year">
+        <div class="year_1 year">
           <div class="semester year_name">
             <h2>1st Year</h2>
           </div>
 
-          <div id="fall_1" class="semester">
-            <p class="difficulty_bar">
+          <div class="fall_1 semester">
+            <div class="difficulty_bar">
               <h3>Workload</h3>
-              <progress id="year1_fall1_tab1_difficulty" class="difficulty_bar_green" value="0" max="100"></progress>
-            </p>
+              <progress id="year1_fall1_tab1_difficulty1" class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
           </div>
 
-          <div id="spring_1" class="semester"></div>
+          <div class="spring_1 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
 
-          <div id="summer_1" class="semester"></div>
+          <div class="summer_1 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
         </div>
 
-        <div id="year_2" class="year">
+        <div class="year_2 year">
           <div class="semester year_name">
             <h2>2nd Year</h2>
           </div>
 
-          <div id="fall_2" class="semester"></div>
+          <div class="fall_2 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
 
-          <div id="spring_2" class="semester"></div>
+          <div class="spring_2 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
 
-          <div id="summer_2" class="semester"></div>
+          <div class="summer_2 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
         </div>
 
-        <div id="year_3" class="year">
+        <div class="year_3 year">
           <div class="semester year_name">
             <h2>3rd Year</h2>
           </div>
 
-          <div id="fall_3" class="semester"></div>
+          <div class="fall_3 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
 
-          <div id="spring_3" class="semester"></div>
+          <div class="spring_3 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
 
-          <div id="summer_3" class="semester"></div>
+          <div class="summer_3 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
         </div>
 
-        <div id="year_4" class="year">
+        <div class="year_4 year">
           <div class="semester year_name">
             <h2>4th Year</h2>
           </div>
 
-          <div id="fall_4" class="semester"></div>
+          <div class="fall_4 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
 
-          <div id="spring_4" class="semester"></div>
+          <div class="spring_4 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
 
-          <div id="summer_4" class="semester"></div>
+          <div class="summer_4 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
         </div>
       </div>
 
       <div id="schedule2" class="calendar_component">
-          <div id="semester_names" class="year">
-            <div class="semester year_name"></div>
-  
-            <div id="fall" class="semester">
-              <h2>Fall</h2>
-            </div>
-  
-            <div id="spring" class="semester">
-              <h2>Spring</h2>
-            </div>
-  
-            <div id="summer" class="semester">
-              <h2>Summer</h2>
-            </div>
+        <div class="semester_names year">
+          <div class="semester year_name"></div>
+
+          <div class="fall semester">
+            <h2>Fall</h2>
           </div>
-  
-          <div id="year_1" class="year">
-            <div class="semester year_name">
-              <h2>1st Year</h2>
-            </div>
-  
-            <div id="fall_1" class="semester">
-              <p class="difficulty_bar">
-                <h3>Workload</h3>
-                <progress id="year1_fall1_tab1_difficulty2" class="difficulty_bar_green" value="0" max="100"></progress>
-              </p>
-            </div>
-  
-            <div id="spring_1" class="semester"></div>
-  
-            <div id="summer_1" class="semester"></div>
+
+          <div class="spring semester">
+            <h2>Spring</h2>
           </div>
-  
-          <div id="year_2" class="year">
-            <div class="semester year_name">
-              <h2>2nd Year</h2>
-            </div>
-  
-            <div id="fall_2" class="semester"></div>
-  
-            <div id="spring_2" class="semester"></div>
-  
-            <div id="summer_2" class="semester"></div>
-          </div>
-  
-          <div id="year_3" class="year">
-            <div class="semester year_name">
-              <h2>3rd Year</h2>
-            </div>
-  
-            <div id="fall_3" class="semester"></div>
-  
-            <div id="spring_3" class="semester"></div>
-  
-            <div id="summer_3" class="semester"></div>
-          </div>
-  
-          <div id="year_4" class="year">
-            <div class="semester year_name">
-              <h2>4th Year</h2>
-            </div>
-  
-            <div id="fall_4" class="semester"></div>
-  
-            <div id="spring_4" class="semester"></div>
-  
-            <div id="summer_4" class="semester"></div>
+
+          <div class="summer semester">
+            <h2>Summer</h2>
           </div>
         </div>
+
+        <div class="year_1 year">
+          <div class="semester year_name">
+            <h2>1st Year</h2>
+          </div>
+
+          <div class="fall_1 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress id="year1_fall1_tab1_difficulty2" class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+
+          <div class="spring_1 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+
+          <div class="summer_1 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+        </div>
+
+        <div class="year_2 year">
+          <div class="semester year_name">
+            <h2>2nd Year</h2>
+          </div>
+
+          <div class="fall_2 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+
+          <div class="spring_2 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+
+          <div class="summer_2 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+        </div>
+
+        <div class="year_3 year">
+          <div class="semester year_name">
+            <h2>3rd Year</h2>
+          </div>
+
+          <div class="fall_3 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+
+          <div class="spring_3 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+
+          <div class="summer_3 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+        </div>
+
+        <div class="year_4 year">
+          <div class="semester year_name">
+            <h2>4th Year</h2>
+          </div>
+
+          <div class="fall_4 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+
+          <div class="spring_4 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+
+          <div class="summer_4 semester">
+            <div class="difficulty_bar">
+              <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- <section id="right_nav">
 
     </section> -->
-    
+
     <script>
       function openPage(pageName, elmnt, color) {
         var i, tabcontent, tablinks;
