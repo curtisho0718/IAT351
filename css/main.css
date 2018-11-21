@@ -321,6 +321,10 @@ progress::-webkit-progress-bar {
   height: 100%;
 }
 
+.sp-palette {
+max-width: 200px;
+}
+
 #Home {background-color: #1B4687;}
 #News {background-color: #1B4687;}
 #Contact {background-color: #1B4687;}
