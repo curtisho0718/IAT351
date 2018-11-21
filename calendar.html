@@ -16,7 +16,6 @@
 <body>
   <header>
     <h1>Long-term Planner</h1>
-
   </header>
 
   <main>
@@ -38,20 +37,36 @@
         <div class="savebutton">
           <button onClick="myFunction()">Save this page</button>
         </div>
-<!--         <div class="colorPicker">
+        <div class="colorPicker">
           <input type="text" id="showPaletteOnly"/>
-        </div> -->
+        </div>
 
-        <!-- Vertical Menu -->
-    <div class="vertical-menu">
-      <ul>
-        <li class="item">Item 1</li>
-        <li class="item">Item 2</li>
-        <li class="item">Item 3</li>
-        <li class="item">Item 4</li>
-        <li class="item">Item 5</li>
-      </ul>
-    </div>
+        <!-- Course List -->
+        <div class="course-list">
+          <ul>
+            <li class="item">IAT100</li>
+            <li class="item">IAT102</li>
+            <li class="item">IAT265</li>
+            <li class="item">IAT235</li>
+            <li class="item">IAT355</li>
+          </ul>
+        </div> </br>
+        
+        <div class="course-list" name="code">
+          <?php
+          $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
+          $data=file_get_contents($base_url);
+          $json_data=json_decode($data);
+          $dataLength=count($json_data);
+          var_dump($dataLength);
+
+          for($i = 0; $i< $dataLength ; $i++){
+              $value= $json_data[$i]->text;
+              echo $value . "<br />";
+              echo "<option value=".$value.">".$value."</option>";
+          }
+          ?>
+        </div>
 
     </section>
 
@@ -386,9 +401,6 @@ $("#showPaletteOnly").spectrum({
         "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
     ]
 });
-
-
-
 </script>
 
   <script>

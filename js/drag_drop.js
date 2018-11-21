@@ -4,12 +4,12 @@ function myFunction() {
 }
 
 $(function() {
-    $("table").hide(0).show(1000);
     $("li").hide(0).slideDown(1100);
     $("ul").sortable();
     $("ul").disableSelection();
 
-    $("li").draggable({containment: 'document', revert: true, snap: 'td', scroll: false, helper: "clone",
+
+    $("li").draggable({containment: 'document', revert: true, snap: '.semester', scroll: false, helper: "clone",
     	start: function() {
     		var content = $(this).text();
    		}

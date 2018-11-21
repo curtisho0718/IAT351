@@ -25,6 +25,10 @@ p, label {
   color: #000000;
 }
 
+li {
+    list-style-type: none;
+}
+
 a {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
@@ -75,7 +79,7 @@ main {
 
 .course-list {
     width: 10rem;
-    height: 12rem;
+    height: 6rem;
     overflow: scroll;
 }
 

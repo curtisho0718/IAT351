@@ -43,15 +43,15 @@
         </div> -->
 
         <!-- Vertical Menu -->
-        <div class="vertical-menu">
+        <div class="course-list">
           <ul>
-            <li class="item">Item 1</li>
-            <li class="item">Item 2</li>
-            <li class="item">Item 3</li>
-            <li class="item">Item 4</li>
-            <li class="item">Item 5</li>
+            <li class="IAT100">Item 1</li>
+            <li class="IAT102">Item 2</li>
+            <li class="IAT265">Item 3</li>
+            <li class="IAT235">Item 4</li>
+            <li class="IAT333">Item 5</li>
           </ul>
-        </div>
+        </div> </br>
         
         <!-- Course List -->
         <div class="course-list" name="code">
