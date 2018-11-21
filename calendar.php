@@ -52,7 +52,7 @@
             <li class="item">Item 5</li>
           </ul>
         </div>
-        
+
         <!-- Course List -->
         <div class="course-list" name="code">
           <?php
@@ -60,7 +60,6 @@
           $data=file_get_contents($base_url);
           $json_data=json_decode($data);
           $dataLength=count($json_data);
-          var_dump($dataLength);
 
           for($i = 0; $i< $dataLength ; $i++){
               $value= $json_data[$i]->text;
