@@ -28,6 +28,7 @@ $(function() {
 
 $( function() {
     $( "#sortable1, #sortable2" ).sortable({
+        scroll: false,
       connectWith: ".connectedSortable"
     }).disableSelection();
   } );
