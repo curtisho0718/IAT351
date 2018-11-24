@@ -10,8 +10,8 @@
   <link href="css/main.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<!--    <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
- --></head>
+   <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
+</head>
 
 <body>
   <header>
@@ -39,20 +39,35 @@
         </div>
         <div class="colorPicker">
           <input type="text" id="showPaletteOnly"/>
-        </div>
+        </div> </br>
 
         <!-- Course List -->
         <div class="course-list">
-          <ul>
+          <ul id="sortable1" class="connectedSortable">
             <li class="item">IAT100</li>
             <li class="item">IAT102</li>
-            <li class="item">IAT265</li>
+            <li class="item">IAT103W</li>
+            <li class="item">IAT106</li>
+            <li class="item">IAT202</li>
+            <li class="item">IAT222</li>
+            <li class="item">IAT233</li>
             <li class="item">IAT235</li>
+            <li class="item">IAT265</li>
+            <li class="item">IAT313</li>
+            <li class="item">IAT333</li>
+            <li class="item">IAT343</li>
+            <li class="item">IAT344</li>
+            <li class="item">IAT351</li>
+            <li class="item">IAT352</li>
             <li class="item">IAT355</li>
+            <li class="item">IAT410</li>
+            <li class="item">IAT437</li>
+            <li class="item">IAT438</li>
+            <li class="item">IAT455</li>
           </ul>
-        </div> </br>
+        </div></br>
         
-        <div class="course-list" name="code">
+<!--         <div class="course-list" name="code">
           <?php
           $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
           $data=file_get_contents($base_url);
@@ -66,7 +81,7 @@
               echo "<option value=".$value.">".$value."</option>";
           }
           ?>
-        </div>
+        </div> -->
 
     </section>
 
@@ -104,6 +119,7 @@
           </div>
 
           <div class="fall_1 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress id="year1_fall1_tab1_difficulty1" class="difficulty_bar_green" value="0" max="100"></progress>
@@ -111,6 +127,7 @@
           </div>
 
           <div class="spring_1 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -118,6 +135,7 @@
           </div>
 
           <div class="summer_1 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -131,6 +149,7 @@
           </div>
 
           <div class="fall_2 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -138,6 +157,7 @@
           </div>
 
           <div class="spring_2 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -145,6 +165,7 @@
           </div>
 
           <div class="summer_2 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -158,6 +179,7 @@
           </div>
 
           <div class="fall_3 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -165,6 +187,7 @@
           </div>
 
           <div class="spring_3 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -172,6 +195,7 @@
           </div>
 
           <div class="summer_3 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -185,6 +209,7 @@
           </div>
 
           <div class="fall_4 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -192,6 +217,7 @@
           </div>
 
           <div class="spring_4 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -199,6 +225,7 @@
           </div>
 
           <div class="summer_4 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -359,7 +386,6 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="//code.jquery.com/jquery-git.js"></script>
     <script src="http://bgrins.github.com/spectrum/spectrum.js"></script>
     <script src="js/drag_drop.js"></script>
     <script src="js/tabs_and_difficulty.js"></script>
