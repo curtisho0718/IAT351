@@ -10,13 +10,12 @@
   <link href="css/main.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-<!--    <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
- --></head>
+   <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
+</head>
 
 <body>
   <header>
     <h1>Long-term Planner</h1>
-
   </header>
 
   <main>
@@ -38,23 +37,14 @@
         <div class="savebutton">
           <button onClick="myFunction()">Save this page</button>
         </div>
-<!--         <div class="colorPicker">
+        <div class="colorPicker">
           <input type="text" id="showPaletteOnly"/>
-        </div> -->
-
-        <!-- Vertical Menu -->
-        <div class="course-list">
-          <ul>
-            <li class="IAT100">Item 1</li>
-            <li class="IAT102">Item 2</li>
-            <li class="IAT265">Item 3</li>
-            <li class="IAT235">Item 4</li>
-            <li class="IAT333">Item 5</li>
-          </ul>
         </div> </br>
-        
+
         <!-- Course List -->
         <div class="course-list" name="code">
+          <ul id="sortable1" class="connectedSortable">
+
           <?php
           $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
           $data=file_get_contents($base_url);
@@ -64,11 +54,14 @@
 
           for($i = 0; $i< $dataLength ; $i++){
               $value= $json_data[$i]->text;
-              echo $value . "<br />";
-              echo "<option value=".$value.">".$value."</option>";
+              echo "<li value=".$value.">".$value."</li>";
           }
           ?>
-        </div>
+
+          </ul>
+        </div></br>
+        
+
 
     </section>
 
@@ -106,6 +99,7 @@
           </div>
 
           <div class="fall_1 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress id="year1_fall1_tab1_difficulty1" class="difficulty_bar_green" value="0" max="100"></progress>
@@ -113,6 +107,7 @@
           </div>
 
           <div class="spring_1 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -120,6 +115,7 @@
           </div>
 
           <div class="summer_1 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -133,6 +129,7 @@
           </div>
 
           <div class="fall_2 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -140,6 +137,7 @@
           </div>
 
           <div class="spring_2 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -147,6 +145,7 @@
           </div>
 
           <div class="summer_2 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -160,6 +159,7 @@
           </div>
 
           <div class="fall_3 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -167,6 +167,7 @@
           </div>
 
           <div class="spring_3 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -174,6 +175,7 @@
           </div>
 
           <div class="summer_3 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -187,6 +189,7 @@
           </div>
 
           <div class="fall_4 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -194,6 +197,7 @@
           </div>
 
           <div class="spring_4 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -201,6 +205,7 @@
           </div>
 
           <div class="summer_4 semester">
+            <ul id="sortable2" class="connectedSortable"></ul>
             <div class="difficulty_bar">
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
@@ -361,7 +366,6 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="//code.jquery.com/jquery-git.js"></script>
     <script src="http://bgrins.github.com/spectrum/spectrum.js"></script>
     <script src="js/drag_drop.js"></script>
     <script src="js/tabs_and_difficulty.js"></script>
@@ -403,9 +407,6 @@ $("#showPaletteOnly").spectrum({
         "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
     ]
 });
-
-
-
 </script>
 
   <script>
