@@ -18,10 +18,15 @@
 </head>
 
 <body>
-    <select id="dropDown">
-    </select>
-    <p id="testing"></p>
+    <input type="button" 
+        onclick="populateSelect()" 
+            value="Get Course" />
 
+            <select id="sel" onchange="show(this)">
+                <option value="">-- Select --</option>
+            </select>
+        
+            <p id="msg"></p>
 </body>
 <script src="js/course.js"></script>
 </html>

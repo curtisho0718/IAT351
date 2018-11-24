@@ -46,8 +46,7 @@
           <ul id="sortable1" class="connectedSortable">
 
           <?php
-          // $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat";
-          $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat";
+          $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
           $data=file_get_contents($base_url);
           $json_data=json_decode($data);
           $dataLength=count($json_data);
@@ -55,7 +54,7 @@
 
           for($i = 0; $i< $dataLength ; $i++){
               $value= $json_data[$i]->text;
-              echo "<li value=".$value.">"."IAT".$value."</li>";
+              echo "<li value=".$value.">".$value."</li>";
           }
           ?>
 
