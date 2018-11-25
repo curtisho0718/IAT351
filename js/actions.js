@@ -5,9 +5,22 @@ console.log("actions.js JavaScript is online.");
 /* Beginning of tabs and difficulty ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
 var table_shown = 1;
 var semestercredits = document.getElementsByClassName("semester_credits");
+var cumulativecredits = document.getElementById("cumulative_credits");
 var year1_fall_tab1_credits = 0;
 var year1_spring_tab1_credits = 0;
 var year1_summer_tab1_credits = 0;
+
+var year2_fall_tab1_credits = 0;
+var year2_spring_tab1_credits = 0;
+var year2_summer_tab1_credits = 0;
+
+var year3_fall_tab1_credits = 0;
+var year3_spring_tab1_credits = 0;
+var year3_summer_tab1_credits = 0;
+
+var year4_fall_tab1_credits = 0;
+var year4_spring_tab1_credits = 0;
+var year4_summer_tab1_credits = 0;
 
 window.onload = function () {
     $("#schedule1").show();
@@ -96,6 +109,12 @@ function fire() {
             $(progressbar[i]).addClass("difficulty_bar_yellow");
         }
     }
+
+    cumulativecredits.innerHTML = "Cumulative Credits: " +
+        (year1_fall_tab1_credits + year1_spring_tab1_credits + year1_summer_tab1_credits
+            + year2_fall_tab1_credits + year2_spring_tab1_credits + year2_summer_tab1_credits
+            + year3_fall_tab1_credits + year3_spring_tab1_credits + year3_summer_tab1_credits
+            + year4_fall_tab1_credits + year4_spring_tab1_credits + year4_summer_tab1_credits);
 }
 /* End of tabs and difficulty ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
 
@@ -157,7 +176,7 @@ $(function () {
             }
 
             fire();
-            semestercredits[0].innerHTML = "Credits:" + year1_fall_tab1_credits;
+            semestercredits[0].innerHTML = "Credits: " + year1_fall_tab1_credits;
         },
 
         remove: function (event, ui) {
@@ -179,7 +198,7 @@ $(function () {
             }
 
             fire();
-            semestercredits[0].innerHTML = "Credits:" + year1_fall_tab1_credits;
+            semestercredits[0].innerHTML = "Credits: " + year1_fall_tab1_credits;
         }
     });
 
@@ -204,11 +223,9 @@ $(function () {
             }
 
             fire();
-            semestercredits[1].innerHTML = "Credits:" + year1_spring_tab1_credits;
-        }
-    });
+            semestercredits[1].innerHTML = "Credits: " + year1_spring_tab1_credits;
+        },
 
-    $(".sortable2:eq(1)").sortable({
         remove: function (event, ui) {
             if ($(ui.item).hasClass("easy")) {
                 year1_spring_tab1_credits -= 3;
@@ -228,7 +245,7 @@ $(function () {
             }
 
             fire();
-            semestercredits[1].innerHTML = "Credits:" + year1_spring_tab1_credits;
+            semestercredits[1].innerHTML = "Credits: " + year1_spring_tab1_credits;
         }
     });
 
@@ -242,22 +259,20 @@ $(function () {
                 year1_summer_tab1_credits += 3;
                 addNormalCourse(2);
             } else if ($(ui.item).hasClass("hard")) {
-                year1_summer_tab1_credits += 3;
+                year1_summer_tab1_credits += 4;
                 addHardCourse(2);
             } else if ($(ui.item).hasClass("233")) {
                 year1_summer_tab1_credits += 3;
                 add233(2);
             } else if ($(ui.item).hasClass("438")) {
-                year1_summer_tab1_credits += 3;
+                year1_summer_tab1_credits += 4;
                 add438(2);
             }
 
             fire();
-            semestercredits[2].innerHTML = "Credits:" + year1_summer_tab1_credits;
-        }
-    });
+            semestercredits[2].innerHTML = "Credits: " + year1_summer_tab1_credits;
+        },
 
-    $(".sortable2:eq(2)").sortable({
         remove: function (event, ui) {
             if ($(ui.item).hasClass("easy")) {
                 year1_summer_tab1_credits -= 3;
@@ -277,10 +292,435 @@ $(function () {
             }
 
             fire();
-            semestercredits[2].innerHTML = "Credits:" + year1_summer_tab1_credits;
+            semestercredits[2].innerHTML = "Credits: " + year1_summer_tab1_credits;
         }
     });
 
+    // Year 2 Fall Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――――
+    $(".sortable2:eq(3)").sortable({
+
+        receive: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year2_fall_tab1_credits += 3;
+                addEasyCourse(3);
+            } else if ($(ui.item).hasClass("normal")) {
+                year2_fall_tab1_credits += 3;
+                addNormalCourse(3);
+            } else if ($(ui.item).hasClass("hard")) {
+                year2_fall_tab1_credits += 4;
+                addHardCourse(3);
+            } else if ($(ui.item).hasClass("233")) {
+                year2_fall_tab1_credits += 3;
+                add233(3);
+            } else if ($(ui.item).hasClass("438")) {
+                year2_fall_tab1_credits += 4;
+                add438(3);
+            }
+
+            fire();
+            semestercredits[3].innerHTML = "Credits: " + year2_fall_tab1_credits;
+        },
+
+        remove: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year2_fall_tab1_credits -= 3;
+                removeEasyCourse(3);
+            } else if ($(ui.item).hasClass("normal")) {
+                year2_fall_tab1_credits -= 3;
+                removeNormalCourse(3);
+            } else if ($(ui.item).hasClass("hard")) {
+                year2_fall_tab1_credits -= 4;
+                removeHardCourse(3);
+            } else if ($(ui.item).hasClass("233")) {
+                year2_fall_tab1_credits -= 3;
+                remove233(3);
+            } else if ($(ui.item).hasClass("438")) {
+                year2_fall_tab1_credits -= 4;
+                remove438(3);
+            }
+
+            fire();
+            semestercredits[3].innerHTML = "Credits: " + year2_fall_tab1_credits;
+        }
+    });
+
+    // Year 2 Spring Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――
+    $(".sortable2:eq(4)").sortable({
+        receive: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year2_spring_tab1_credits += 3;
+                addEasyCourse(4);
+            } else if ($(ui.item).hasClass("normal")) {
+                year2_spring_tab1_credits += 3;
+                addNormalCourse(4);
+            } else if ($(ui.item).hasClass("hard")) {
+                year2_spring_tab1_credits += 4;
+                addHardCourse(4);
+            } else if ($(ui.item).hasClass("233")) {
+                year2_spring_tab1_credits += 3;
+                add233(4);
+            } else if ($(ui.item).hasClass("438")) {
+                year2_spring_tab1_credits += 4;
+                add438(4);
+            }
+
+            fire();
+            semestercredits[4].innerHTML = "Credits: " + year2_spring_tab1_credits;
+        },
+
+        remove: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year2_spring_tab1_credits -= 3;
+                removeEasyCourse(4);
+            } else if ($(ui.item).hasClass("normal")) {
+                year2_spring_tab1_credits -= 3;
+                removeNormalCourse(4);
+            } else if ($(ui.item).hasClass("hard")) {
+                year2_spring_tab1_credits -= 4;
+                removeHardCourse(4);
+            } else if ($(ui.item).hasClass("233")) {
+                year2_spring_tab1_credits -= 3;
+                remove233(4);
+            } else if ($(ui.item).hasClass("438")) {
+                year2_spring_tab1_credits -= 4;
+                remove438(4);
+            }
+
+            fire();
+            semestercredits[4].innerHTML = "Credits: " + year2_spring_tab1_credits;
+        }
+    });
+
+    // Year 2 Summer Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――
+    $(".sortable2:eq(5)").sortable({
+        receive: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year2_summer_tab1_credits += 3;
+                addEasyCourse(5);
+            } else if ($(ui.item).hasClass("normal")) {
+                year2_summer_tab1_credits += 3;
+                addNormalCourse(5);
+            } else if ($(ui.item).hasClass("hard")) {
+                year2_summer_tab1_credits += 4;
+                addHardCourse(5);
+            } else if ($(ui.item).hasClass("233")) {
+                year2_summer_tab1_credits += 3;
+                add233(5);
+            } else if ($(ui.item).hasClass("438")) {
+                year2_summer_tab1_credits += 4;
+                add438(5);
+            }
+
+            fire();
+            semestercredits[5].innerHTML = "Credits: " + year2_summer_tab1_credits;
+        },
+
+        remove: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year2_summer_tab1_credits -= 3;
+                removeEasyCourse(5);
+            } else if ($(ui.item).hasClass("normal")) {
+                year2_summer_tab1_credits -= 3;
+                removeNormalCourse(5);
+            } else if ($(ui.item).hasClass("hard")) {
+                year2_summer_tab1_credits -= 4;
+                removeHardCourse(5);
+            } else if ($(ui.item).hasClass("233")) {
+                year2_summer_tab1_credits -= 3;
+                remove233(5);
+            } else if ($(ui.item).hasClass("438")) {
+                year2_summer_tab1_credits -= 4;
+                remove438(5);
+            }
+
+            fire();
+            semestercredits[5].innerHTML = "Credits: " + year2_summer_tab1_credits;
+        }
+    });
+
+        // Year 3 Fall Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――――
+        $(".sortable2:eq(6)").sortable({
+
+            receive: function (event, ui) {
+                if ($(ui.item).hasClass("easy")) {
+                    year3_fall_tab1_credits += 3;
+                    addEasyCourse(6);
+                } else if ($(ui.item).hasClass("normal")) {
+                    year3_fall_tab1_credits += 3;
+                    addNormalCourse(6);
+                } else if ($(ui.item).hasClass("hard")) {
+                    year3_fall_tab1_credits += 4;
+                    addHardCourse(6);
+                } else if ($(ui.item).hasClass("233")) {
+                    year3_fall_tab1_credits += 3;
+                    add233(6);
+                } else if ($(ui.item).hasClass("438")) {
+                    year3_fall_tab1_credits += 4;
+                    add438(6);
+                }
+    
+                fire();
+                semestercredits[6].innerHTML = "Credits: " + year3_fall_tab1_credits;
+            },
+    
+            remove: function (event, ui) {
+                if ($(ui.item).hasClass("easy")) {
+                    year3_fall_tab1_credits -= 3;
+                    removeEasyCourse(6);
+                } else if ($(ui.item).hasClass("normal")) {
+                    year3_fall_tab1_credits -= 3;
+                    removeNormalCourse(6);
+                } else if ($(ui.item).hasClass("hard")) {
+                    year3_fall_tab1_credits -= 4;
+                    removeHardCourse(6);
+                } else if ($(ui.item).hasClass("233")) {
+                    year3_fall_tab1_credits -= 3;
+                    remove233(6);
+                } else if ($(ui.item).hasClass("438")) {
+                    year3_fall_tab1_credits -= 4;
+                    remove438(6);
+                }
+    
+                fire();
+                semestercredits[6].innerHTML = "Credits: " + year3_fall_tab1_credits;
+            }
+        });
+    
+        // Year 3 Spring Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――
+        $(".sortable2:eq(7)").sortable({
+            receive: function (event, ui) {
+                if ($(ui.item).hasClass("easy")) {
+                    year3_spring_tab1_credits += 3;
+                    addEasyCourse(7);
+                } else if ($(ui.item).hasClass("normal")) {
+                    year3_spring_tab1_credits += 3;
+                    addNormalCourse(7);
+                } else if ($(ui.item).hasClass("hard")) {
+                    year3_spring_tab1_credits += 4;
+                    addHardCourse(7);
+                } else if ($(ui.item).hasClass("233")) {
+                    year3_spring_tab1_credits += 3;
+                    add233(7);
+                } else if ($(ui.item).hasClass("438")) {
+                    year3_spring_tab1_credits += 4;
+                    add438(7);
+                }
+    
+                fire();
+                semestercredits[7].innerHTML = "Credits: " + year3_spring_tab1_credits;
+            },
+    
+            remove: function (event, ui) {
+                if ($(ui.item).hasClass("easy")) {
+                    year3_spring_tab1_credits -= 3;
+                    removeEasyCourse(7);
+                } else if ($(ui.item).hasClass("normal")) {
+                    year3_spring_tab1_credits -= 3;
+                    removeNormalCourse(7);
+                } else if ($(ui.item).hasClass("hard")) {
+                    year3_spring_tab1_credits -= 4;
+                    removeHardCourse(7);
+                } else if ($(ui.item).hasClass("233")) {
+                    year3_spring_tab1_credits -= 3;
+                    remove233(7);
+                } else if ($(ui.item).hasClass("438")) {
+                    year3_spring_tab1_credits -= 4;
+                    remove438(7);
+                }
+    
+                fire();
+                semestercredits[7].innerHTML = "Credits: " + year3_spring_tab1_credits;
+            }
+        });
+    
+        // Year 3 Summer Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――
+        $(".sortable2:eq(8)").sortable({
+            receive: function (event, ui) {
+                if ($(ui.item).hasClass("easy")) {
+                    year3_summer_tab1_credits += 3;
+                    addEasyCourse(8);
+                } else if ($(ui.item).hasClass("normal")) {
+                    year3_summer_tab1_credits += 3;
+                    addNormalCourse(8);
+                } else if ($(ui.item).hasClass("hard")) {
+                    year3_summer_tab1_credits += 4;
+                    addHardCourse(8);
+                } else if ($(ui.item).hasClass("233")) {
+                    year3_summer_tab1_credits += 3;
+                    add233(8);
+                } else if ($(ui.item).hasClass("438")) {
+                    year3_summer_tab1_credits += 4;
+                    add438(8);
+                }
+    
+                fire();
+                semestercredits[8].innerHTML = "Credits: " + year3_summer_tab1_credits;
+            },
+    
+            remove: function (event, ui) {
+                if ($(ui.item).hasClass("easy")) {
+                    year3_summer_tab1_credits -= 3;
+                    removeEasyCourse(8);
+                } else if ($(ui.item).hasClass("normal")) {
+                    year3_summer_tab1_credits -= 3;
+                    removeNormalCourse(8);
+                } else if ($(ui.item).hasClass("hard")) {
+                    year3_summer_tab1_credits -= 4;
+                    removeHardCourse(8);
+                } else if ($(ui.item).hasClass("233")) {
+                    year3_summer_tab1_credits -= 3;
+                    remove233(8);
+                } else if ($(ui.item).hasClass("438")) {
+                    year3_summer_tab1_credits -= 4;
+                    remove438(8);
+                }
+    
+                fire();
+                semestercredits[8].innerHTML = "Credits: " + year3_summer_tab1_credits;
+            }
+        });
+
+        // Year 4 Fall Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――――
+    $(".sortable2:eq(9)").sortable({
+
+        receive: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year4_fall_tab1_credits += 3;
+                addEasyCourse(9);
+            } else if ($(ui.item).hasClass("normal")) {
+                year4_fall_tab1_credits += 3;
+                addNormalCourse(9);
+            } else if ($(ui.item).hasClass("hard")) {
+                year4_fall_tab1_credits += 4;
+                addHardCourse(9);
+            } else if ($(ui.item).hasClass("233")) {
+                year4_fall_tab1_credits += 3;
+                add233(9);
+            } else if ($(ui.item).hasClass("438")) {
+                year4_fall_tab1_credits += 4;
+                add438(9);
+            }
+
+            fire();
+            semestercredits[9].innerHTML = "Credits: " + year4_fall_tab1_credits;
+        },
+
+        remove: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year4_fall_tab1_credits -= 3;
+                removeEasyCourse(9);
+            } else if ($(ui.item).hasClass("normal")) {
+                year4_fall_tab1_credits -= 3;
+                removeNormalCourse(9);
+            } else if ($(ui.item).hasClass("hard")) {
+                year4_fall_tab1_credits -= 4;
+                removeHardCourse(9);
+            } else if ($(ui.item).hasClass("233")) {
+                year4_fall_tab1_credits -= 3;
+                remove233(9);
+            } else if ($(ui.item).hasClass("438")) {
+                year4_fall_tab1_credits -= 4;
+                remove438(9);
+            }
+
+            fire();
+            semestercredits[9].innerHTML = "Credits: " + year4_fall_tab1_credits;
+        }
+    });
+
+    // Year 4 Spring Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――
+    $(".sortable2:eq(10)").sortable({
+        receive: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year4_spring_tab1_credits += 3;
+                addEasyCourse(10);
+            } else if ($(ui.item).hasClass("normal")) {
+                year4_spring_tab1_credits += 3;
+                addNormalCourse(10);
+            } else if ($(ui.item).hasClass("hard")) {
+                year4_spring_tab1_credits += 4;
+                addHardCourse(10);
+            } else if ($(ui.item).hasClass("233")) {
+                year4_spring_tab1_credits += 3;
+                add233(10);
+            } else if ($(ui.item).hasClass("438")) {
+                year4_spring_tab1_credits += 4;
+                add438(10);
+            }
+
+            fire();
+            semestercredits[10].innerHTML = "Credits: " + year4_spring_tab1_credits;
+        },
+
+        remove: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year4_spring_tab1_credits -= 3;
+                removeEasyCourse(10);
+            } else if ($(ui.item).hasClass("normal")) {
+                year4_spring_tab1_credits -= 3;
+                removeNormalCourse(10);
+            } else if ($(ui.item).hasClass("hard")) {
+                year4_spring_tab1_credits -= 4;
+                removeHardCourse(10);
+            } else if ($(ui.item).hasClass("233")) {
+                year4_spring_tab1_credits -= 3;
+                remove233(10);
+            } else if ($(ui.item).hasClass("438")) {
+                year4_spring_tab1_credits -= 4;
+                remove438(10);
+            }
+
+            fire();
+            semestercredits[10].innerHTML = "Credits: " + year4_spring_tab1_credits;
+        }
+    });
+
+    // Year 4 Summer Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――
+    $(".sortable2:eq(11)").sortable({
+        receive: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year4_summer_tab1_credits += 3;
+                addEasyCourse(11);
+            } else if ($(ui.item).hasClass("normal")) {
+                year4_summer_tab1_credits += 3;
+                addNormalCourse(11);
+            } else if ($(ui.item).hasClass("hard")) {
+                year4_summer_tab1_credits += 4;
+                addHardCourse(11);
+            } else if ($(ui.item).hasClass("233")) {
+                year4_summer_tab1_credits += 3;
+                add233(11);
+            } else if ($(ui.item).hasClass("438")) {
+                year4_summer_tab1_credits += 4;
+                add438(11);
+            }
+
+            fire();
+            semestercredits[11].innerHTML = "Credits: " + year4_summer_tab1_credits;
+        },
+
+        remove: function (event, ui) {
+            if ($(ui.item).hasClass("easy")) {
+                year4_summer_tab1_credits -= 3;
+                removeEasyCourse(11);
+            } else if ($(ui.item).hasClass("normal")) {
+                year4_summer_tab1_credits -= 3;
+                removeNormalCourse(11);
+            } else if ($(ui.item).hasClass("hard")) {
+                year4_summer_tab1_credits -= 4;
+                removeHardCourse(11);
+            } else if ($(ui.item).hasClass("233")) {
+                year4_summer_tab1_credits -= 3;
+                remove233(11);
+            } else if ($(ui.item).hasClass("438")) {
+                year4_summer_tab1_credits -= 4;
+                remove438(11);
+            }
+
+            fire();
+            semestercredits[11].innerHTML = "Credits: " + year4_summer_tab1_credits;
+        }
+    });
 });
 
   /* End of drag and drop ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
