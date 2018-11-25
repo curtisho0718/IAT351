@@ -20,7 +20,7 @@ h3 {
   margin: 0.5rem 0 0.5rem 0;
 }
 
-p, label {
+div, p, label {
   font-family: 'Raleway', sans-serif;
   color: #000000;
 }
