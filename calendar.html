@@ -34,7 +34,7 @@
         </div>
         <div class="colorPicker">
           <input type="text" id="showPaletteOnly" />
-        </div> </br>
+        </div> <br>
 
         <!-- Course List -->
         <div class="course-list">
@@ -60,7 +60,7 @@
             <li class="item 438">IAT438</li>
             <li class="item normal">IAT455</li>
           </ul>
-        </div></br>
+        </div><br>
 
         <!--         <div class="course-list" name="code">
           <?php
