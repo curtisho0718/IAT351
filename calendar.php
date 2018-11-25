@@ -78,6 +78,7 @@
           ?>
         </div> -->
 
+        <div id="cumulative_credits">Cumulative Credits: 0</div>
     </section>
 
     <section id="calendar_view">
@@ -149,6 +150,7 @@
           <div class="fall_2 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
@@ -157,6 +159,7 @@
           <div class="spring_2 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
@@ -165,6 +168,7 @@
           <div class="summer_2 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
@@ -179,6 +183,7 @@
           <div class="fall_3 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
@@ -187,6 +192,7 @@
           <div class="spring_3 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
@@ -195,6 +201,7 @@
           <div class="summer_3 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
@@ -209,6 +216,7 @@
           <div class="fall_4 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
@@ -217,6 +225,7 @@
           <div class="spring_4 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
@@ -225,6 +234,7 @@
           <div class="summer_4 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
+              <div class="semester_credits">Credits: 0</div>
               <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
