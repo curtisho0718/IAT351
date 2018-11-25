@@ -20,26 +20,9 @@
 
   <main>
     <section id="left_nav">
+
       <div class="vertical_line">
         <a href="#">Test</a>
-        <div class="checkbox_pair">
-          <label class="container">
-            <input onclick="addEasyCourse(); fire();" type="checkbox">
-            <span class="checkmark"></span>
-            One
-          </label>
-          <label class="container">
-            <input onclick="removeEasyCourse(); fire();" type="checkbox">
-            <span class="checkmark"></span>
-            One
-          </label>
-        </div>
-        <div class="savebutton">
-          <button onClick="myFunction()">Save this page</button>
-        </div>
-        <div class="colorPicker">
-          <input type="text" id="showPaletteOnly"/>
-        </div> <br />
 
         <!-- Course List -->
         <div class="course-list" name="code">
@@ -61,7 +44,28 @@
 
           </ul>
         </div><br />
-        
+
+        <div class="checkbox_pair">
+          <label class="container">
+            <input onclick="addEasyCourse(); fire();" type="checkbox">
+            <span class="checkmark"></span>
+            One
+          </label>
+          <label class="container">
+            <input onclick="removeEasyCourse(); fire();" type="checkbox">
+            <span class="checkmark"></span>
+            One
+          </label>
+        </div>
+        <div class="colorPicker">
+          <input type="text" id="showPaletteOnly"/>
+        </div>
+        <div class="savebutton">
+          <button onClick="myFunction()">Save this page</button>
+        </div>
+       <br />
+
+
 
 
     </section>
