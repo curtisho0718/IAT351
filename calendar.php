@@ -35,22 +35,46 @@
         </div> <br>-->
 
         <!-- Course List -->
-        <div class="course-list" name="code">
+        <div class="course-list">
           <ul class="sortable1 connectedSortable">
-            <?php
-              $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
-              $data=file_get_contents($base_url);
-              $json_data=json_decode($data);
-              $dataLength=count($json_data);
-              var_dump($dataLength);
-
-              for($i = 0; $i< $dataLength ; $i++){
-                  $value= $json_data[$i]->text;
-                  echo "<li>".$value."</li>";
-              }
-            ?>
+            <li class="item easy">IAT100</li>
+            <li class="item easy">IAT102</li>
+            <li class="item normal">IAT103W</li>
+            <li class="item normal">IAT106</li>
+            <li class="item hard">IAT202</li>
+            <li class="item easy">IAT222</li>
+            <li class="item 233">IAT233</li>
+            <li class="item easy">IAT235</li>
+            <li class="item hard">IAT265</li>
+            <li class="item normal">IAT313</li>
+            <li class="item hard">IAT333</li>
+            <li class="item normal">IAT343</li>
+            <li class="item normal">IAT344</li>
+            <li class="item normal">IAT351</li>
+            <li class="item normal">IAT352</li>
+            <li class="item normal">IAT355</li>
+            <li class="item normal">IAT410</li>
+            <li class="item normal">IAT437</li>
+            <li class="item 438">IAT438</li>
+            <li class="item normal">IAT455</li>
           </ul>
-        </div> 
+        </div><br>
+
+        <!--         <div class="course-list" name="code">
+          <?php
+          $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
+          $data=file_get_contents($base_url);
+          $json_data=json_decode($data);
+          $dataLength=count($json_data);
+          var_dump($dataLength);
+
+          for($i = 0; $i< $dataLength ; $i++){
+              $value= $json_data[$i]->text;
+              echo $value . "<br />";
+              echo "<option value=".$value.">".$value."</option>";
+          }
+          ?>
+        </div> -->
 
         <div id="cumulative_credits">Cumulative Credits: 0</div>
 
