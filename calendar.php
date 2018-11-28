@@ -29,12 +29,10 @@
             One
           </label>
         </div>
-        <div class="savebutton">
-          <button onClick="myFunction()">Save this page</button>
-        </div>
-        <div class="colorPicker">
+
+      <!--  <div class="colorPicker">
           <input type="text" id="showPaletteOnly" />
-        </div> <br>
+        </div> <br>-->
 
         <!-- Course List -->
         <div class="course-list">
@@ -79,6 +77,15 @@
         </div> -->
 
         <div id="cumulative_credits">Cumulative Credits: 0</div>
+
+        <div class="colorPicker">
+          <input type="text" id="showPaletteOnly" />
+        </div>
+
+        <div class="savebutton">
+          <button onClick="myFunction()">Save this page</button>
+        </div>
+
     </section>
 
     <section id="calendar_view">
