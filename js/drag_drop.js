@@ -31,4 +31,4 @@ $( function() {
         scroll: false,
       connectWith: ".connectedSortable"
     }).disableSelection();
-  } );
+} );
