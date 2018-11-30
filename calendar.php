@@ -38,11 +38,10 @@
   <!-- Course List -->
         <div class="course-list" name="code">
           <ul class="sortable1 connectedSortable">
-             <li class="item easy">IAT100</li>
           <li class="ui-state-default item easy" value="coop" id="coop" onClick= reply_click(this.id)>Co-op</li> 
           <!-- Import courses from SFU API -->
           <?php
-            $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
+            $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat";
             $data=file_get_contents($base_url);
             $json_data=json_decode($data);
             $dataLength=count($json_data);
@@ -56,11 +55,11 @@
           </ul>
         </div><br>
 
-        <div id="cumulative_credits">Cumulative Credits: 0</div>
+        <div id="cumulative_credits"><strong>Cumulative Credits:</strong> 0</div><br/>
 
         <div class="colorPicker">
-          <input type="text" id="showPaletteOnly" />
-        </div>
+          <input type="text" id="showPaletteOnly"/> 
+        </div><br/>
 
         <div class="savebutton">
           <button onClick="myFunction()">Save this page</button>
@@ -80,17 +79,15 @@
       </div>
 
       <div id="schedule1" class="calendar_component">
+        
         <div class="semester_names year">
-          <div class="semester year_name"></div>
-
+          <div class="semester year_name" style="padding-bottom: 1.7rem;"></div>
           <div class="fall semester">
             <h2>Fall</h2>
           </div>
-
           <div class="spring semester">
             <h2>Spring</h2>
           </div>
-
           <div class="summer semester">
             <h2>Summer</h2>
           </div>
@@ -103,17 +100,15 @@
           </div>
 
           <div class="fall_1 semester">
-
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-
-              <div class="popup" onclick="popUp()"><strong>info</strong>
+              <h4>Workload</h4>
+                <progress class="difficulty_bar_green" value="0" max="100"></progress>
+<!--               <div class="popup" onclick="popUp()"><strong>info</strong>
                 <span class="popuptext" id="myPopup">
-                  <h3>Workload</h3>
-                  <progress class="difficulty_bar_green" value="0" max="100"></progress>
                 </span>
-            </div>
+              </div> -->
               <!-- <h3>Workload</h3>
               <progress class="difficulty_bar_green" value="0" max="100"></progress> -->
             </div>
@@ -123,7 +118,7 @@
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -132,7 +127,7 @@
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -141,13 +136,14 @@
         <div class="year_2 year">
           <div class="semester year_name">
             <h2>2nd Year</h2>
+            <input type="text" placeholder="Enter Year" class= "input_year"><br/>
           </div>
 
           <div class="fall_2 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -156,7 +152,7 @@
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -165,7 +161,7 @@
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -174,13 +170,14 @@
         <div class="year_3 year">
           <div class="semester year_name">
             <h2>3rd Year</h2>
+            <input type="text" placeholder="Enter Year" class= "input_year"><br/>            
           </div>
 
           <div class="fall_3 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -189,7 +186,7 @@
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -198,7 +195,7 @@
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -207,13 +204,14 @@
         <div class="year_4 year">
           <div class="semester year_name">
             <h2>4th Year</h2>
+            <input type="text" placeholder="Enter Year" class= "input_year"><br/>            
           </div>
 
           <div class="fall_4 semester">
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -222,7 +220,7 @@
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -231,7 +229,7 @@
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -262,21 +260,21 @@
 
           <div class="fall_1 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
           <div class="spring_1 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
           <div class="summer_1 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -289,21 +287,21 @@
 
           <div class="fall_2 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
           <div class="spring_2 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
           <div class="summer_2 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -316,21 +314,21 @@
 
           <div class="fall_3 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
           <div class="spring_3 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
           <div class="summer_3 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -343,21 +341,21 @@
 
           <div class="fall_4 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
           <div class="spring_4 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
           <div class="summer_4 semester">
             <div class="difficulty_bar">
-              <h3>Workload</h3>
+              <h4>Workload</h4>
               <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
@@ -405,7 +403,7 @@
         document.getElementById(id).style.backgroundColor = color;
         id= " "
       }
-      
+
       function reply_click(clicked_id){
         id = clicked_id
       }

@@ -20,6 +20,12 @@ h3 {
   margin: 0.5rem 0 0.5rem 0;
 }
 
+h4 {
+  font-family: 'Cabin', sans-serif;
+  color: #000000;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
 div, p, label {
   font-family: 'Raleway', sans-serif;
   color: #000000;
@@ -359,7 +365,7 @@ progress::-webkit-progress-bar {
 
 .difficulty_bar {
   position: absolute;
-  left: 1rem;
+  left: 11rem;
   right: 1rem;
   bottom: 1rem;
 }

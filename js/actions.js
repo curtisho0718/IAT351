@@ -110,11 +110,12 @@ function fire() {
         }
     }
 
-    cumulativecredits.innerHTML = "Cumulative Credits: " +
+    cumulativecredits.innerHTML = "<strong> Cumulative Credits: </strong>" +
         (year1_fall_tab1_credits + year1_spring_tab1_credits + year1_summer_tab1_credits
             + year2_fall_tab1_credits + year2_spring_tab1_credits + year2_summer_tab1_credits
             + year3_fall_tab1_credits + year3_spring_tab1_credits + year3_summer_tab1_credits
-            + year4_fall_tab1_credits + year4_spring_tab1_credits + year4_summer_tab1_credits);
+            + year4_fall_tab1_credits + year4_spring_tab1_credits + year4_summer_tab1_credits)
+            // + "/120"; 
 }
 /* End of tabs and difficulty ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
 
