@@ -40,31 +40,6 @@
           <ul class="sortable1 connectedSortable">
           <li>Co-op</li> 
           <!-- Import courses from SFU API -->
-
-            <li class="item easy"id="iat100"onClick="reply_click(this.id)">IAT100</li>
-            <li class="item easy"id="iat102"onClick="reply_click(this.id)">IAT102</li>
-            <li class="item normal"id="iat103w"onClick="reply_click(this.id)">IAT103W</li>
-            <li class="item normal"id="iat106"onClick="reply_click(this.id)">IAT106</li>
-            <li class="item hard"id="iat202"onClick="reply_click(this.id)">IAT202</li>
-            <li class="item easy"id="iat222"onClick="reply_click(this.id)">IAT222</li>
-            <li class="item 233"id="iat233"onClick="reply_click(this.id)">IAT233</li>
-            <li class="item easy"id="iat235"onClick="reply_click(this.id)">IAT235</li>
-            <li class="item hard"id="iat265"onClick="reply_click(this.id)">IAT265</li>
-            <li class="item normal"id="iat313"onClick="reply_click(this.id)">IAT313</li>
-            <li class="item hard"id="iat333"onClick="reply_click(this.id)">IAT333</li>
-            <li class="item normal"id="iat343"onClick="reply_click(this.id)">IAT343</li>
-            <li class="item normal"id="iat344"onClick="reply_click(this.id)">IAT344</li>
-            <li class="item normal"id="iat351"onClick="reply_click(this.id)">IAT351</li>
-            <li class="item normal"id="iat352"onClick="reply_click(this.id)">IAT352</li>
-            <li class="item normal"id="iat355"onClick="reply_click(this.id)">IAT355</li>
-            <li class="item normal"id="iat410"onClick="reply_click(this.id)">IAT410</li>
-            <li class="item normal"id="iat437"onClick="reply_click(this.id)">IAT437</li>
-            <li class="item 438"id="iat438"onClick="reply_click(this.id)">IAT438</li>
-            <li class="item normal"id="iat455"onClick="reply_click(this.id)">IAT455</li>
-          </ul>
-        </div><br>
-
-       <div class="course-list" name="code">
           <?php
           $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
           $data=file_get_contents($base_url);
@@ -74,7 +49,7 @@
 
           for($i = 0; $i< $dataLength ; $i++){
               $value= $json_data[$i]->text;
-              echo "<li class=".'"ui-state-default"'."value=".$value.">".$value."</li>";
+              echo "<li class=".'"ui-state-default"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">IAT".$value."</li>";
           }
           ?>
           </ul>

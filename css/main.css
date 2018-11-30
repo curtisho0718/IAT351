@@ -99,8 +99,8 @@ main {
     padding: 5px;
     font-size: 1.2em;
     width: 120px;
-/*    background-color: lightgrey;
-*/  }
+    /*background-color: lightgrey;*/
+  }
 
   .ui-state-highlight { 
     height: 1.5rem; 
@@ -110,11 +110,11 @@ main {
     border-color: yellow;
   }
 
- .ui-state-default { 
+  .ui-state-default { 
     height: 1.5em; 
     line-height: 1.2em; 
     background-color: lightgrey;
-}
+  }
 
 #calendar_view {
   display: flex;
