@@ -112,6 +112,10 @@
                 <span class="popuptext" id="myPopup">
                   <h3>Workload</h3>
                   <progress class="difficulty_bar_green" value="0" max="100"></progress>
+
+                  <div class="colorPicker">
+                    <input type="text" id="showPaletteOnly" />
+                  </div>
                 </span>
             </div>
               <!-- <h3>Workload</h3>
@@ -402,15 +406,12 @@
       var id = " ";
 
       function printColor(color) {
-
         document.getElementById(id).style.backgroundColor = color;
-
-
       }
+
       function reply_click(clicked_id){
         id = clicked_id
       }
-
 
       $("#showPaletteOnly").spectrum({
         color: "rgb(244, 204, 204)",
