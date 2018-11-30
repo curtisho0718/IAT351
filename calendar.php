@@ -43,7 +43,6 @@
                         $data=file_get_contents($base_url);
                         $json_data=json_decode($data);
                         $dataLength=count($json_data);
-                        var_dump($dataLength);
 
                         for($i = 0; $i< $dataLength ; $i++){
                             $text= $json_data[$i]->text;
@@ -63,15 +62,12 @@
             $data=file_get_contents($base_url);
             $json_data=json_decode($data);
             $dataLength=count($json_data);
-            var_dump($dataLength);
 
             for($i = 0; $i< $dataLength ; $i++){
                 $value= $json_data[$i]->text;
                 echo "<li class=".'"ui-state-default item easy"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">
                 IAT".$value.'
                 <div class="popup" onclick="popUp()"><strong>i</strong>
-                  <span class="popuptext" id="myPopup">
-                  </span>
                 </div>
                 </li>';
             }
