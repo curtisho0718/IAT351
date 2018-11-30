@@ -38,7 +38,6 @@
   <!-- Course List -->
         <div class="course-list" name="code">
           <ul class="sortable1 connectedSortable">
-             <li class="item easy">IAT100</li>
           <li class="ui-state-default item easy" value="coop" id="coop" onClick= reply_click(this.id)>Co-op</li> 
           <!-- Import courses from SFU API -->
           <?php
@@ -112,10 +111,6 @@
                 <span class="popuptext" id="myPopup">
                   <h3>Workload</h3>
                   <progress class="difficulty_bar_green" value="0" max="100"></progress>
-
-                  <div class="colorPicker">
-                    <input type="text" id="showPaletteOnly" />
-                  </div>
                 </span>
             </div>
               <!-- <h3>Workload</h3>
@@ -408,7 +403,6 @@
       function printColor(color) {
         document.getElementById(id).style.backgroundColor = color;
       }
-
       function reply_click(clicked_id){
         id = clicked_id
       }
