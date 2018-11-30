@@ -39,7 +39,7 @@
         <div class="course-list" name="code">
           <ul class="sortable1 connectedSortable">
              <li class="item easy">IAT100</li>
-          <li class="ui-state-default item easy" value="coop" id="coop" onClick= reply_click(this.id)>Co-op</li> 
+          <li class="ui-state-default item easy" value="coop" id="coop" onClick= reply_click(this.id)>Co-op</li>
           <!-- Import courses from SFU API -->
           <?php
             $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
@@ -404,6 +404,7 @@
       function printColor(color) {
 
         document.getElementById(id).style.backgroundColor = color;
+        id = " "
 
 
       }
