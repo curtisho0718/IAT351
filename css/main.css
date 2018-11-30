@@ -96,24 +96,31 @@ main {
 
   .sortable1 li, .sortable2 li {
     margin: 0 5px 5px 5px;
-    padding: 5px;
+    padding: 0.25rem 0.5rem;
     font-size: 1.2em;
     width: 120px;
     /*background-color: lightgrey;*/
   }
 
+  .ui-state-default:active {
+      border-style: solid;
+      border-color: blue;   
+  }
+
   .ui-state-highlight { 
-    height: 1.5rem; 
+    height: 2.25rem; 
     width: 2.5rem;
     line-height: 1.2em; 
     border-style: solid;
     border-color: yellow;
+    border-radius: 2px;
   }
 
   .ui-state-default { 
-    height: 1.5em; 
+/*    height: 1.5em; */
     line-height: 1.2em; 
     background-color: lightgrey;
+    border-radius: 2px;
   }
 
 #calendar_view {
