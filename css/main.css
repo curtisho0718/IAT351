@@ -201,7 +201,7 @@ main {
 
 
 /**/
-/* Popup container - https://www.w3schools.com/howto/howto_js_popup.asp*/
+/* POP-UP container - https://www.w3schools.com/howto/howto_js_popup.asp*/
 .popup {
     position: relative;
     display: inline-block;
@@ -211,17 +211,17 @@ main {
 /* The actual popup (appears on top) */
 .popup .popuptext {
     visibility: hidden;
-    width: 160px;
+    width: 40rem;
+    height: 25rem;
     background-color: lightgrey;
     color:lightgrey;
     text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
+    border-radius: 5px;
+    padding: 1rem;
     position: absolute;
     z-index: 2;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
+    left: 250%;
+    margin-top: 2rem;
 }
 
 /* Popup arrow */
@@ -365,7 +365,7 @@ progress::-webkit-progress-bar {
 
 .difficulty_bar {
   position: absolute;
-  left: 11rem;
+  left: 12rem;
   right: 1rem;
   bottom: 1rem;
 }

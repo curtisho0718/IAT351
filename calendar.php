@@ -35,6 +35,24 @@
           <input type="text" id="showPaletteOnly" />
         </div> <br>-->
 
+              <div class="popup" onclick="popUp()"><strong></strong>
+                <span class="popuptext" id="myPopup" style="color: black;">
+                    <h3>Course info</h3>
+                      <?php
+                        $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat/351/";
+                        $data=file_get_contents($base_url);
+                        $json_data=json_decode($data);
+                        $dataLength=count($json_data);
+                        var_dump($dataLength);
+
+                        for($i = 0; $i< $dataLength ; $i++){
+                            $text= $json_data[$i]->text;
+                            echo "<p>".$text.'</p>';
+                        }
+                      ?>
+                </span>
+              </div>
+
   <!-- Course List -->
         <div class="course-list" name="code">
           <ul class="sortable1 connectedSortable">
@@ -49,7 +67,13 @@
 
             for($i = 0; $i< $dataLength ; $i++){
                 $value= $json_data[$i]->text;
-                echo "<li class=".'"ui-state-default item easy"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">IAT".$value."</li>";
+                echo "<li class=".'"ui-state-default item easy"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">
+                IAT".$value.'
+                <div class="popup" onclick="popUp()"><strong>i</strong>
+                  <span class="popuptext" id="myPopup">
+                  </span>
+                </div>
+                </li>';
             }
           ?>
           </ul>
@@ -104,13 +128,7 @@
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
               <h4>Workload</h4>
-                <progress class="difficulty_bar_green" value="0" max="100"></progress>
-<!--               <div class="popup" onclick="popUp()"><strong>info</strong>
-                <span class="popuptext" id="myPopup">
-                </span>
-              </div> -->
-              <!-- <h3>Workload</h3>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress> -->
+              <progress class="difficulty_bar_green" value="0" max="100"></progress>
             </div>
           </div>
 
