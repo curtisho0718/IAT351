@@ -118,6 +118,16 @@ function fire() {
 }
 /* End of tabs and difficulty ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
 
+
+// Pop-up 
+// When the user clicks on <div>, open the popup
+function popUp() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+// 
+
+
 /* Beginning of drag and drop ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
 // function myFunction() {
 //     var x = $(".num").length - 1;
@@ -153,7 +163,6 @@ $(function () {
         connectWith: ".connectedSortable",
         placeholder: "ui-state-highlight"
     }).disableSelection();
-
 
 
     // Year 1 Fall Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――――

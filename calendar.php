@@ -38,19 +38,20 @@
   <!-- Course List -->
         <div class="course-list" name="code">
           <ul class="sortable1 connectedSortable">
-          <li class="ui-state-default" value="coop" id="coop" onClick= reply_click(this.id)>Co-op</li> 
+             <li class="item easy">IAT100</li>
+          <li class="ui-state-default item easy" value="coop" id="coop" onClick= reply_click(this.id)>Co-op</li> 
           <!-- Import courses from SFU API -->
           <?php
-          $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
-          $data=file_get_contents($base_url);
-          $json_data=json_decode($data);
-          $dataLength=count($json_data);
-          var_dump($dataLength);
+            $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
+            $data=file_get_contents($base_url);
+            $json_data=json_decode($data);
+            $dataLength=count($json_data);
+            var_dump($dataLength);
 
-          for($i = 0; $i< $dataLength ; $i++){
-              $value= $json_data[$i]->text;
-              echo "<li class=".'"ui-state-default"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">IAT".$value."</li>";
-          }
+            for($i = 0; $i< $dataLength ; $i++){
+                $value= $json_data[$i]->text;
+                echo "<li class=".'"ui-state-default item easy"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">IAT".$value."</li>";
+            }
           ?>
           </ul>
         </div><br>
@@ -102,11 +103,19 @@
           </div>
 
           <div class="fall_1 semester">
+
             <ul class="sortable2 connectedSortable"></ul>
             <div class="difficulty_bar">
               <div class="semester_credits">Credits: 0</div>
-              <h3>Workload</h3>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
+
+              <div class="popup" onclick="popUp()"><strong>info</strong>
+                <span class="popuptext" id="myPopup">
+                  <h3>Workload</h3>
+                  <progress class="difficulty_bar_green" value="0" max="100"></progress>
+                </span>
+            </div>
+              <!-- <h3>Workload</h3>
+              <progress class="difficulty_bar_green" value="0" max="100"></progress> -->
             </div>
           </div>
 
