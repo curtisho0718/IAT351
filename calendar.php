@@ -402,11 +402,10 @@
       var id = " ";
 
       function printColor(color) {
-
         document.getElementById(id).style.backgroundColor = color;
-
-
+        id= " "
       }
+      
       function reply_click(clicked_id){
         id = clicked_id
       }
