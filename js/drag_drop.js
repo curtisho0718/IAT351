@@ -17,7 +17,7 @@ $(function() {
 
  //    $(".semester").droppable({hoverClass: 'bgrd', accept: '.item', //Jquery 'hover' instead of CSS
  //        drop: function() {
- //        	$(this).addClass("num");
+ //        	$(this)zz.addClass("num");
  //        	$("td").append(content);
 
  //        	$(".num").length;
@@ -27,8 +27,9 @@ $(function() {
 });
 
 $( function() {
-    $( "#sortable1, #sortable2" ).sortable({
+    $(".sortable1, .sortable2").sortable({
         scroll: false,
-      connectWith: ".connectedSortable"
+        connectWith: ".connectedSortable",
+        // placeholder: "ui-state-highlight"
     }).disableSelection();
-  } );
+  });

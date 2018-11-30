@@ -19,48 +19,27 @@
   </header>
 
   <main>
+    <!-- LEFT NAV -->
     <section id="left_nav">
       <div class="vertical_line">
-        <a href="#">Test</a>
-        <div class="checkbox_pair">
+        <a href="#">Course List</a> <br/>
+        <!-- <div class="checkbox_pair">
           <label class="container">
             <input type="checkbox">
             <span class="checkmark"></span>
             One
           </label>
-        </div>
+        </div> -->
 
       <!--  <div class="colorPicker">
           <input type="text" id="showPaletteOnly" />
         </div> <br>-->
 
-        <!-- Course List -->
-        <div class="course-list">
+  <!-- Course List -->
+        <div class="course-list" name="code">
           <ul class="sortable1 connectedSortable">
-            <li class="item easy">IAT100</li>
-            <li class="item easy">IAT102</li>
-            <li class="item normal">IAT103W</li>
-            <li class="item normal">IAT106</li>
-            <li class="item hard">IAT202</li>
-            <li class="item easy">IAT222</li>
-            <li class="item 233">IAT233</li>
-            <li class="item easy">IAT235</li>
-            <li class="item hard">IAT265</li>
-            <li class="item normal">IAT313</li>
-            <li class="item hard">IAT333</li>
-            <li class="item normal">IAT343</li>
-            <li class="item normal">IAT344</li>
-            <li class="item normal">IAT351</li>
-            <li class="item normal">IAT352</li>
-            <li class="item normal">IAT355</li>
-            <li class="item normal">IAT410</li>
-            <li class="item normal">IAT437</li>
-            <li class="item 438">IAT438</li>
-            <li class="item normal">IAT455</li>
-          </ul>
-        </div><br>
-
-        <!--         <div class="course-list" name="code">
+          <li>Co-op</li> 
+          <!-- Import courses from SFU API -->
           <?php
           $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/summer/iat";
           $data=file_get_contents($base_url);
@@ -70,11 +49,11 @@
 
           for($i = 0; $i< $dataLength ; $i++){
               $value= $json_data[$i]->text;
-              echo $value . "<br />";
-              echo "<option value=".$value.">".$value."</option>";
+              echo "<li class=".'"ui-state-default"'."value=".$value.">".$value."</li>";
           }
           ?>
-        </div> -->
+          </ul>
+        </div><br>
 
         <div id="cumulative_credits">Cumulative Credits: 0</div>
 
@@ -85,9 +64,9 @@
         <div class="savebutton">
           <button onClick="myFunction()">Save this page</button>
         </div>
-
     </section>
 
+<!-- SCHEDULE -->
     <section id="calendar_view">
       <div id="tabs_component">
         <button class="tablink" id="tab_button1" onclick="openPage('tab1', this, 'red')" id="defaultOpen">Schedule 1</button>
@@ -119,6 +98,7 @@
         <div class="year_1 year">
           <div class="semester year_name">
             <h2>1st Year</h2>
+             <input type="text" placeholder="Enter Year" class= "input_year"><br/>
           </div>
 
           <div class="fall_1 semester">

@@ -150,8 +150,10 @@ $(function () {
 $(function () {
     $(".sortable1, .sortable2").sortable({
         scroll: false,
-        connectWith: ".connectedSortable"
+        connectWith: ".connectedSortable",
+        placeholder: "ui-state-highlight"
     }).disableSelection();
+
 
 
     // Year 1 Fall Tab 1 ――――――――――――――――――――――――――――――――――――――――――――――――

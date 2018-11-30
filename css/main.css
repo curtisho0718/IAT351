@@ -99,8 +99,22 @@ main {
     padding: 5px;
     font-size: 1.2em;
     width: 120px;
-    background-color: lightgrey;
+/*    background-color: lightgrey;
+*/  }
+
+  .ui-state-highlight { 
+    height: 1.5rem; 
+    width: 2.5rem;
+    line-height: 1.2em; 
+    border-style: solid;
+    border-color: yellow;
   }
+
+ .ui-state-default { 
+    height: 1.5em; 
+    line-height: 1.2em; 
+    background-color: lightgrey;
+}
 
 #calendar_view {
   display: flex;
@@ -142,6 +156,15 @@ main {
   display: flex;
   flex-direction: column;
   flex: 2;
+}
+
+.input_year {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: black;
+  border: none;
+  border-bottom: 0.05rem solid grey;
+  width: 5rem;
 }
 
 .semester_names {
