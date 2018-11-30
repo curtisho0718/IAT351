@@ -39,14 +39,15 @@
                 <span class="popuptext" id="myPopup" style="color: black;">
                     <h3>Course info</h3>
                       <?php
-                        $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat/351/";
+                        $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat/351/d100";
                         $data=file_get_contents($base_url);
                         $json_data=json_decode($data);
                         $dataLength=count($json_data);
 
                         for($i = 0; $i< $dataLength ; $i++){
-                            $text= $json_data[$i]->text;
-                            echo "<p>".$text.'</p>';
+                            // $text= $json_data[$i]->text;
+                            $info=$json_data->info->courseDetails;
+                            echo "<p>".$info.'</p>';
                         }
                       ?>
                 </span>
