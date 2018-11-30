@@ -64,7 +64,7 @@
             $dataLength=count($json_data);
 
             for($i = 0; $i< $dataLength ; $i++){
-                $value= $json_data[$i]->text;
+                $value= $json_data[$i]->value;
                 echo "<li class=".'"ui-state-default item easy"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">
                 IAT".$value.'
                 <div class="popup" onclick="popUp()"><strong>i</strong>
