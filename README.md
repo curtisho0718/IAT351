@@ -6,3 +6,5 @@ When XAMPP is installed, the file must then be placed into the file C:/xampp/htd
 From there, you must start the XAMPP Control panel and hit "Start" on Apache
 
 Finally, you can open the application by typing localhost/*fileName*/calendar.php
+
+XAMPP Link: https://www.apachefriends.org/index.html
