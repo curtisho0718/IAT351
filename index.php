@@ -375,19 +375,7 @@
             </div>
           </div>
         </div>
-
-
-         <div class="year_4 year">
-          <div class="semester year_name">
-            <h2>add year</h2>
-          </div>
-
-          
       </div>
-      </div>
-
-
-     
     </section>
 
     <!-- <section id="right_nav">
