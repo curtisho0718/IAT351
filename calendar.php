@@ -35,23 +35,19 @@
           <input type="text" id="showPaletteOnly" />
         </div> <br>-->
 
-              <div class="popup" onclick="popUp()"><strong></strong>
-                <span class="popuptext" id="myPopup" style="color: black;">
-                    <h3>Course info</h3>
-                      <?php
-                        $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat/351/d100";
-                        $data=file_get_contents($base_url);
-                        $json_data=json_decode($data);
-                        $dataLength=count($json_data);
-
-                        for($i = 0; $i< $dataLength ; $i++){
-                            // $text= $json_data[$i]->text;
-                            $info=$json_data->info->courseDetails;
-                            echo "<p>".$info.'</p>';
-                        }
-                      ?>
-                </span>
-              </div>
+        <div class="popup" onclick="popUp()"><strong></strong>
+          <span class="popuptext" id="myPopup" style="color: black;">
+              <h3>Course info</h3>
+                <?php
+                  $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat/351/d100";
+                  $data=file_get_contents($base_url);
+                  $json_data=json_decode($data);
+                  
+                  $info=$json_data->info->courseDetails;
+                  echo "<p>".$info.'</p>';
+                ?>
+          </span>
+        </div>
 
   <!-- Course List -->
         <div class="course-list" name="code">
@@ -65,7 +61,7 @@
             $dataLength=count($json_data);
 
             for($i = 0; $i< $dataLength ; $i++){
-                $value= $json_data[$i]->text;
+                $value= $json_data[$i]->value;
                 echo "<li class=".'"ui-state-default item easy"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">
                 IAT".$value.'
                 <div class="popup" onclick="popUp()"><img class="icon" src="noun_i_1675402.svg">
@@ -102,7 +98,7 @@
       <div id="schedule1" class="calendar_component">
 
         <div class="semester_names year">
-          <div class="semester year_name"></div>
+          <div class="semester year_name top_left_block" style="min-height: 6.88rem;"></div>
           <div class="fall semester">
             <h2>Fall</h2>
           </div>
