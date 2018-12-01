@@ -35,24 +35,28 @@
           <input type="text" id="showPaletteOnly" />
         </div> <br>-->
 
-        <div class="popup" onclick="popUp()"><strong></strong>
-          <span class="popuptext" id="myPopup" style="color: black;">
-              <h3>Course info</h3>
-                <?php
-                  $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat/351/d100";
-                  $data=file_get_contents($base_url);
-                  $json_data=json_decode($data);
-                  
-                  $info=$json_data->info->courseDetails;
-                  echo "<p>".$info.'</p>';
-                ?>
-          </span>
-        </div>
+              <div class="popup" onclick="popUp()"><strong></strong>
+                <span class="popuptext" id="myPopup" style="color: black;">
+                    <h3>Course info</h3>
+                      <?php
+                        $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat/351/d100";
+                        $data=file_get_contents($base_url);
+                        $json_data=json_decode($data);
+                        $dataLength=count($json_data);
+
+                        for($i = 0; $i< $dataLength ; $i++){
+                            // $text= $json_data[$i]->text;
+                            $info=$json_data->info->courseDetails;
+                            echo "<p>".$info.'</p>';
+                        }
+                      ?>
+                </span>
+              </div>
 
   <!-- Course List -->
         <div class="course-list" name="code">
           <ul class="sortable1 connectedSortable">
-          <li class="ui-state-default item easy" value="coop" id="coop" onClick= reply_click(this.id)>Co-op</li>
+          <li class="ui-state-default item easy" value="coop" id="coop" onClick= reply_click(this.id)>Co-op</li> 
           <!-- Import courses from SFU API -->
           <?php
             $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat";
@@ -61,10 +65,10 @@
             $dataLength=count($json_data);
 
             for($i = 0; $i< $dataLength ; $i++){
-                $value= $json_data[$i]->value;
+                $value= $json_data[$i]->text;
                 echo "<li class=".'"ui-state-default item easy"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">
                 IAT".$value.'
-                <div class="popup" onclick="popUp()"><img class="icon" src="noun_i_1675402.svg">
+                <div class="popup" onclick="popUp()"><strong>i</strong>
                 </div>
                 </li>';
             }
@@ -75,7 +79,7 @@
         <div id="cumulative_credits"><strong>Cumulative Credits:</strong> 0</div><br/>
 
         <div class="colorPicker">
-          <input type="text" id="showPaletteOnly"/>
+          <input type="text" id="showPaletteOnly"/> 
         </div><br/>
 
         <div class="savebutton">
@@ -96,9 +100,9 @@
       </div>
 
       <div id="schedule1" class="calendar_component">
-
+        
         <div class="semester_names year">
-          <div class="semester year_name top_left_block" style="min-height: 7rem;"></div>
+          <div class="semester year_name" style="padding-bottom: 1.7rem;"></div>
           <div class="fall semester">
             <h2>Fall</h2>
           </div>
@@ -181,7 +185,7 @@
         <div class="year_3 year">
           <div class="semester year_name">
             <h2>3rd Year</h2>
-            <input type="text" placeholder="Enter Year" class= "input_year"><br/>
+            <input type="text" placeholder="Enter Year" class= "input_year"><br/>            
           </div>
 
           <div class="fall_3 semester">
@@ -215,7 +219,7 @@
         <div class="year_4 year">
           <div class="semester year_name">
             <h2>4th Year</h2>
-            <input type="text" placeholder="Enter Year" class= "input_year"><br/>
+            <input type="text" placeholder="Enter Year" class= "input_year"><br/>            
           </div>
 
           <div class="fall_4 semester">
