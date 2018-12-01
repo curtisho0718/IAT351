@@ -110,21 +110,21 @@ main {
 
   .ui-state-default:active {
       border-style: solid;
-      border-color: blue;   
+      border-color: blue;
   }
 
-  .ui-state-highlight { 
-    height: 2.25rem; 
+  .ui-state-highlight {
+    height: 2.25rem;
     width: 2.5rem;
-    line-height: 1.2em; 
+    line-height: 1.2em;
     border-style: solid;
     border-color: yellow;
     border-radius: 2px;
   }
 
-  .ui-state-default { 
+  .ui-state-default {
 /*    height: 1.5em; */
-    line-height: 1.2em; 
+    line-height: 1.2em;
     background-color: lightgrey;
     border-radius: 2px;
   }
@@ -246,7 +246,7 @@ main {
 
 /* Add animation (fade in the popup) */
 /*@-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
+    from {opacity: 0;}
     to {opacity: 1;}
 }
 
@@ -448,6 +448,11 @@ progress::-webkit-progress-bar {
 
 .sp-palette {
 max-width: 200px;
+}
+
+.icon{
+  padding-left: 15px;
+  padding-right: 5px;
 }
 
 #Home {background-color: #1B4687;}
