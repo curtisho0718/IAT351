@@ -74,6 +74,12 @@
 
         <div id="cumulative_credits"><strong>Cumulative Credits:</strong> 0</div><br/>
 
+        <button id="button" onlick="duplicate()">Click me</button>
+
+        <!-- <div id="col"> 
+          duplicate EVERYTHING INSIE THIS DIV
+        </div> -->
+
         <div class="colorPicker">
           <input type="text" id="showPaletteOnly"/>
         </div><br/>
@@ -110,7 +116,7 @@
           </div>
         </div>
 
-        <div class="year_1 year">
+        <div id="col" class="year_1 year">
           <div class="semester year_name">
             <h2>1st Year</h2>
              <input type="text" placeholder="Enter Year" class= "input_year"><br/>
@@ -454,6 +460,19 @@
         }], "*")
       }
     </script>
+
+    <script>
+      document.getElementById('button').onclick = duplicate;
+      var i = 0;
+      var original = document.getElementById('col');
+
+      function duplicate() {
+          var clone = original.cloneNode(true); // "deep" clone
+          clone.id = "" + ++i; // there can only be one element with an ID
+          original.parentNode.appendChild(clone);
+        }
+      </script>
+    
   </main>
 
   <footer>

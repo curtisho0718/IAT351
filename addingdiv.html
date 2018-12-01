@@ -1,179 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="css/main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Document</title>
+
+  <link href="css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
 
 
 </head>
 
 
 <body>
-<button id="button" onlick="duplicate()">Click me</button>
+  <button id="button" onlick="duplicate()">Click me</button>
 
-<!-- <div id="col"> 
+  <!-- <div id="col"> 
     duplicate EVERYTHING INSIE THIS DIV
 </div> -->
 
+  <section id="calendar_view">
 
-<div id="schedule1" class="calendar_component">
-        
-        <div class="semester_names year">
-          <div class="semester year_name" style="padding-bottom: 1.7rem;"></div>
-          <div class="fall semester">
-            <h2>Fall</h2>
-          </div>
-          <div class="spring semester">
-            <h2>Spring</h2>
-          </div>
-          <div class="summer semester">
-            <h2>Summer</h2>
+
+    <div id="schedule1" class="calendar_component">
+
+      <div class="semester_names year">
+        <div class="semester year_name top_left_block" style="min-height: 6.88rem;"></div>
+        <div class="fall semester">
+          <h2>Fall</h2>
+        </div>
+        <div class="spring semester">
+          <h2>Spring</h2>
+        </div>
+        <div class="summer semester">
+          <h2>Summer</h2>
+        </div>
+      </div>
+
+      <div id="col" class="year_1 year">
+        <div class="semester year_name">
+          <h2>1st Year</h2>
+          <input type="text" placeholder="Enter Year" class="input_year"><br />
+        </div>
+
+        <div class="fall_1 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
           </div>
         </div>
 
-        <div id="col" class="year_1 year">
-          <div class="semester year_name">
-            <h2>1st Year</h2>
-             <input type="text" placeholder="Enter Year" class= "input_year"><br/>
-          </div>
-
-          <div class="fall_1 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-
-          <div class="spring_1 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-
-          <div class="summer_1 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
+        <div class="spring_1 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
           </div>
         </div>
 
-        <div class="year_2 year">
-          <div class="semester year_name">
-            <h2>2nd Year</h2>
-            <input type="text" placeholder="Enter Year" class= "input_year"><br/>
-          </div>
-
-          <div class="fall_2 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-
-          <div class="spring_2 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-
-          <div class="summer_2 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-        </div>
-
-        <div class="year_3 year">
-          <div class="semester year_name">
-            <h2>3rd Year</h2>
-            <input type="text" placeholder="Enter Year" class= "input_year"><br/>            
-          </div>
-
-          <div class="fall_3 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-
-          <div class="spring_3 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-
-          <div class="summer_3 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-        </div>
-
-        <div class="year_4 year">
-          <div class="semester year_name">
-            <h2>4th Year</h2>
-            <input type="text" placeholder="Enter Year" class= "input_year"><br/>            
-          </div>
-
-          <div class="fall_4 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-
-          <div class="spring_4 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
-          </div>
-
-          <div class="summer_4 semester">
-            <ul class="sortable2 connectedSortable"></ul>
-            <div class="difficulty_bar">
-              <div class="semester_credits">Credits: 0</div>
-              <h4>Workload</h4>
-              <progress class="difficulty_bar_green" value="0" max="100"></progress>
-            </div>
+        <div class="summer_1 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
           </div>
         </div>
       </div>
 
+      <div class="year_2 year">
+        <div class="semester year_name">
+          <h2>2nd Year</h2>
+          <input type="text" placeholder="Enter Year" class="input_year"><br />
+        </div>
+
+        <div class="fall_2 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+
+        <div class="spring_2 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+
+        <div class="summer_2 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+      </div>
+
+      <div class="year_3 year">
+        <div class="semester year_name">
+          <h2>3rd Year</h2>
+          <input type="text" placeholder="Enter Year" class="input_year"><br />
+        </div>
+
+        <div class="fall_3 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+
+        <div class="spring_3 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+
+        <div class="summer_3 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+      </div>
+
+      <div class="year_4 year">
+        <div class="semester year_name">
+          <h2>4th Year</h2>
+          <input type="text" placeholder="Enter Year" class="input_year"><br />
+        </div>
+
+        <div class="fall_4 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+
+        <div class="spring_4 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+
+        <div class="summer_4 semester">
+          <ul class="sortable2 connectedSortable"></ul>
+          <div class="difficulty_bar">
+            <div class="semester_credits">Credits: 0</div>
+            <h4>Workload</h4>
+            <progress class="difficulty_bar_green" value="0" max="100"></progress>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -181,17 +186,17 @@
 
 
 <script>
-document.getElementById('button').onclick = duplicate;
+  document.getElementById('button').onclick = duplicate;
 
 
-var i = 0;
-var original = document.getElementById('col');
+  var i = 0;
+  var original = document.getElementById('col');
 
-function duplicate() {
+  function duplicate() {
     var clone = original.cloneNode(true); // "deep" clone
     clone.id = "" + ++i; // there can only be one element with an ID
     original.parentNode.appendChild(clone);
-}
-        </script>
-              
+  }
+</script>
+
 </html>
