@@ -22,7 +22,7 @@
     <!-- LEFT NAV -->
     <section id="left_nav">
       <div class="vertical_line">
-        <a href="#">Course List</a> <br/>
+        <a>Course List</a> <br/>
         <!-- <div class="checkbox_pair">
           <label class="container">
             <input type="checkbox">
@@ -39,6 +39,7 @@
           <span class="popuptext" id="myPopup" style="color: black;">
               <h3>Course info</h3>
                 <?php
+                $course=
                   $base_url="http://www.sfu.ca/bin/wcm/course-outlines?2018/fall/iat/351/d100";
                   $data=file_get_contents($base_url);
                   $json_data=json_decode($data);
@@ -60,12 +61,11 @@
             $json_data=json_decode($data);
             $dataLength=count($json_data);
 
-            for($i = 0; $i< $dataLength ; $i++){
+            for($i = 0; $i< $dataLength ; $i++) {
                 $value= $json_data[$i]->value;
                 echo "<li class=".'"ui-state-default item easy"'."value=".$value." id= iat".$value." onClick= reply_click(this.id)".">
                 IAT".$value.'
-                <div class="popup" onclick="popUp()"><img class="icon" src="noun_i_1675402.svg">
-                </div>
+                <div class="popup" onclick="popUp()"><img class="icon" src="noun_i_1675402.svg"></div>
                 </li>';
             }
           ?>
@@ -74,10 +74,10 @@
 
         <div id="cumulative_credits"><strong>Cumulative Credits:</strong> 0</div><br/>
 
-        <button id="button" onlick="duplicate()">Click me</button>
+        <button id="button" onlick="duplicate()">Add a column</button> </br>
 
         <!-- <div id="col"> 
-          duplicate EVERYTHING INSIE THIS DIV
+          duplicate EVERYTHING INSIDE THIS DIV
         </div> -->
 
         <div class="colorPicker">
