@@ -72,9 +72,8 @@
           </ul>
         </div><br>
 
-        <div id="cumulative_credits"><strong>Cumulative Credits:</strong> 0</div><br/>
+        <div id="cumulative_credits"><strong>Cumulative Credits:</strong> 0</div><br/><br/>
 
-        <button id="button" onlick="duplicate()">Add a column</button> </br>
 
         <!-- <div id="col"> 
           duplicate EVERYTHING INSIDE THIS DIV
@@ -83,9 +82,12 @@
         <div class="colorPicker">
           <input type="text" id="showPaletteOnly"/>
         </div><br/>
+       
+        <button id="button" onlick="duplicate()" style="width: 8rem;">+ Add a column</button><br/>
+        <p><strong>--------------------</strong></p>
 
         <div class="savebutton">
-          <button onClick="myFunction()">Save this page</button>
+          <button style= "margin: 2.5rem 0;" onClick="myFunction()">Save this schedule</button>
         </div>
     </section>
 

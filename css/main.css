@@ -44,9 +44,20 @@ a {
   transition-duration: 0.5s;
 }
 
-a:hover, a:focus {
+button:hover, button:focus {
   color: #0A172B;
   transition-duration: 0.25s;
+}
+
+button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1B4687;
+  padding: 0.5rem;
+  color: #1B4687;
+
 }
 
 header {
@@ -417,7 +428,11 @@ progress::-webkit-progress-bar {
 
 
 
-/* Above code is for the calendar.html file ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
+/* Above code is for the calendar.html/php file ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
+
+@media print {
+max-width: 65%;
+} 
 
 #calendar {
     max-width: 900px;
