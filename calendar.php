@@ -83,11 +83,11 @@
           <input type="text" id="showPaletteOnly"/>
         </div><br/>
        
-        <button id="button" onlick="duplicate()" style="width: 8rem;">+ Add a column</button><br/>
+        <button id="button" onlick="duplicate()" style="width: 8rem; padding-bottom: 0.9rem;">+ Add a column</button><br/>
         <p><strong>--------------------</strong></p>
 
         <div class="savebutton">
-          <button style= "margin: 2.5rem 0;" onClick="myFunction()">Save this schedule</button>
+          <button style= "margin: 3rem 0 3rem 0;" onClick="myFunction()">Save this schedule</button>
         </div>
     </section>
 
