@@ -98,7 +98,7 @@
       <div id="schedule1" class="calendar_component">
         
         <div class="semester_names year">
-          <div class="semester year_name"></div>
+          <div class="semester year_name top_left_block"></div>
           <div class="fall semester">
             <h2>Fall</h2>
           </div>
