@@ -26,6 +26,18 @@ window.onload = function () {
     $("#schedule1").show();
     $("#schedule2").hide();
     table_shown = 1;
+
+    $('#iat102, #iat235, #iat339').mouseenter(function(){
+        console.log("RABBIT!");
+        $("#iat102, #iat235, #iat339").css("border-style", "solid");
+        $("#iat102, #iat235, #iat339").css("border-color", "#ffe87a");
+    });
+
+    $('#iat102, #iat235, #iat339').mouseleave(function(){
+        console.log("RABBIT!");
+        $("#iat102, #iat235, #iat339").css("border-style", "none");
+        $("#iat102, #iat235, #iat339").css("border-color", "#3b3b3b");
+    });
 }
 
 $("#tab_button1").click(function () {
@@ -793,5 +805,4 @@ $(function () {
         }
     });
 });
-
   /* End of drag and drop ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― */
