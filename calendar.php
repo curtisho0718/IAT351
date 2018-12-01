@@ -83,7 +83,7 @@
           <input type="text" id="showPaletteOnly"/>
         </div><br/>
        
-        <button id="button" onlick="duplicate()" style="width: 8rem; padding-bottom: 0.9rem;">+ Add a column</button><br/>
+        <button id="button" onClick="duplicate()" style="width: 8rem; padding-bottom: 0.9rem;">+ Add a column</button><br/>
         <p><strong>--------------------</strong></p>
 
         <div class="savebutton">
@@ -106,7 +106,7 @@
       <div id="schedule1" class="calendar_component">
 
         <div class="semester_names year">
-          <div class="semester year_name top_left_block" style="min-height: 7rem;"></div>
+          <div class="semester year_name top_left_block" style="min-height: 5rem;"></div>
           <div class="fall semester">
             <h2>Fall</h2>
           </div>
@@ -120,7 +120,6 @@
 
         <div id="col" class="year_1 year">
           <div class="semester year_name">
-            <h2>1st Year</h2>
              <input type="text" placeholder="Enter Year" class= "input_year"><br/>
           </div>
 
@@ -154,7 +153,6 @@
 
         <div class="year_2 year">
           <div class="semester year_name">
-            <h2>2nd Year</h2>
             <input type="text" placeholder="Enter Year" class= "input_year"><br/>
           </div>
 
@@ -188,7 +186,6 @@
 
         <div class="year_3 year">
           <div class="semester year_name">
-            <h2>3rd Year</h2>
             <input type="text" placeholder="Enter Year" class= "input_year"><br/>
           </div>
 
@@ -222,7 +219,6 @@
 
         <div class="year_4 year">
           <div class="semester year_name">
-            <h2>4th Year</h2>
             <input type="text" placeholder="Enter Year" class= "input_year"><br/>
           </div>
 
@@ -274,7 +270,6 @@
 
         <div class="year_1 year">
           <div class="semester year_name">
-            <h2>1st Year</h2>
           </div>
 
           <div class="fall_1 semester">
@@ -301,7 +296,6 @@
 
         <div class="year_2 year">
           <div class="semester year_name">
-            <h2>2nd Year</h2>
           </div>
 
           <div class="fall_2 semester">
@@ -328,7 +322,6 @@
 
         <div class="year_3 year">
           <div class="semester year_name">
-            <h2>3rd Year</h2>
           </div>
 
           <div class="fall_3 semester">
@@ -355,7 +348,6 @@
 
         <div class="year_4 year">
           <div class="semester year_name">
-            <h2>4th Year</h2>
           </div>
 
           <div class="fall_4 semester">
@@ -467,7 +459,6 @@
       document.getElementById('button').onclick = duplicate;
       var i = 0;
       var original = document.getElementById('col');
-
       function duplicate() {
           var clone = original.cloneNode(true); // "deep" clone
           clone.id = "" + ++i; // there can only be one element with an ID

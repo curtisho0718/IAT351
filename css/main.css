@@ -187,12 +187,18 @@ main {
 }
 
 .input_year {
-  margin-bottom: 0.75rem;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0 0 0.5rem;
+
+  margin: 1rem 0;
   text-align: center;
   color: black;
   border: none;
   border-bottom: 0.05rem solid grey;
-  width: 5rem;
+  width: 10rem;
+
 }
 
 .semester_names {
@@ -214,7 +220,6 @@ main {
 }
 
 
-/**/
 /* POP-UP container - https://www.w3schools.com/howto/howto_js_popup.asp*/
 .popup {
     position: relative;
@@ -269,7 +274,6 @@ main {
     to {opacity:1 ;}
 }*/
 /**/
-
 
 
 .vertical_line {
