@@ -110,7 +110,11 @@ main {
 
   .ui-state-default:active {
       border-style: solid;
-      border-color: blue;
+      border-color: #3b3b3b;
+  }
+
+  #iat102:active, #iat235:active, #iat339:active {
+    border-color: #ffed00;
   }
 
   .ui-state-highlight {
@@ -197,7 +201,6 @@ main {
   text-align: center;
   flex: 1;
 }
-
 
 
 /**/
